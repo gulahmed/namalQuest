@@ -1,6 +1,9 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
 
 // Variables
 @import "variables";
@@ -10,5 +13,97 @@
 
 .navbar-laravel {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pull-right {
+  float: right;
+}
+
+.i-need-space {
+  display: block;
+  height: 64px;
+}
+
+.content {
+  margin: 50px 0;
+}
+
+.content-card {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+}
+
+h3,h4,h5,h6 {
+  margin: 0 0 32px 0;
+}
+
+.table td.fit, 
+.table th.fit {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.side-nav .list-group-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+}
+
+.side-nav .list-group-item:last-child {
+  margin-bottom: 0;
+}
+
+.side-nav .list-group-item:hover {
+  background-color: #212529;
+  color: #fff;
+  border: none;
+}
+
+.side-nav .apply {
+  background-color: theme-color("primary");
+  color: #fff;
+}
+
+.side-nav .active,
+.side-nav .active:hover{
+  background-color: #eee;
+  color: theme-color("primary");
+  border-left: 5px solid theme-color("primary");
+  border-radius: 0 5px 5px 0;
+}
+
+.alert-danger ul { padding-left:20px; list-style:none; margin-bottom:0; }
+.alert-danger li { margin-bottom:10px; }
+.alert-danger li:last-child { margin-bottom:0; }
+.alert-danger li:before {    
+    font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+    content: '\f071';
+    margin:0 5px 0 -15px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+	float: none;
+}
+
+table.dataTable {
+	margin: 32px auto
+}
+
+ol li { margin-bottom: 18px; padding-left: 12px }
+ol li:last-child { margin-bottom: 0; }
+
+@media (min-width: 992px){
+  .navbar li {
+    margin-left : 0.5em;
+    margin-right : 0.5em;
+  }
+
+  .content-card {
+    padding: 1.25rem 1.5rem;
+  }
 }

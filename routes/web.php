@@ -18,3 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['web','auth']], function () {
+	Route::get('/apply', 'ApplicantController@index')->name('apply');
+	Route::post('/apply/profile', 'ApplicantController@add_profile');
+
+	
+	});
+
+
+Route::get('/contact', function(){
+	return view('applicant.contact');
+});
+
+
+
