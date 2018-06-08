@@ -24,8 +24,9 @@
       @endif
       <div class="card content-card">
         <div class="card-body">
-          <h3>Education</h3>
+          <h3>Education </h3>
           <div class="table-responsive">
+           @if($count > 1)
             <table class="table table-sm">
               <thead><tr>
                   <th>Institution</th>
@@ -35,10 +36,11 @@
                   <th class="fit">Action</th>
                 </tr></thead>
                 <tbody>
-                  <tr><td>Some Institute</td>
-                    <td>some qualification</td>
-                    <td>Passing Year</td>
-                    <td>Pass</td>
+                  @foreach($education as $edu)
+                  <tr><td>{{$edu->institute}}</td>
+                    <td>{{ $edu->board }}</td>
+                    <td>{{ $edu->qualification }}</td>
+
                     <td class="fit">
                     <form action="" method="post">
                         {{csrf_field()}}
@@ -46,11 +48,13 @@
                         <input type="submit" class="btn btn-danger btn-sm" value="Remove" >
                       </form>
                     </td></tr>
+                     @endforeach
 
                 </tbody>
             </table><br/>
-
+            @endif
           </div>
+
           @include('applicant.partials._education_form')
 
 					<span class="i-need-space"></span>

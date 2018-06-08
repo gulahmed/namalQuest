@@ -28,7 +28,11 @@ class EducationController extends Controller
      */
     public function create()
     {
-      return view('applicant.education');
+      $education = Education::all();
+      //where('applicant_id', Auth::user()->id);
+      $count = $education->count();
+
+      return view('applicant.education',['count'=>$count, 'education'=>$education]);
     }
 
     /**
@@ -65,8 +69,9 @@ class EducationController extends Controller
 		]);
 
 		$education->save();
+    $count = Education::where('applicant_id', Auth::user()->id)->count();
 		$success = 'Education Added – '.$education->institute;
-		return redirect()->back()->with('success', $success);
+		return redirect()->back()->with('success', $success)->with('count',$count);
 
     }
 

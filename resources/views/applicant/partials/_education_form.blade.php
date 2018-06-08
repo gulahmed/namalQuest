@@ -1,6 +1,6 @@
 <div class="card bg-light">
 <div class="card-body">
-  <form method="post" action="{{url('apply/education/hssc')}}" class="form">
+  <form method="post" action="{{url('apply/education')}}" class="form">
     {{csrf_field()}}
     <div class="form-group"><input type="text" class="form-control" name="institute" maxlength="30" placeholder="Institute/School/College Name" value="{{ old('institute') }}"/></div>
     <div class="form-group">
