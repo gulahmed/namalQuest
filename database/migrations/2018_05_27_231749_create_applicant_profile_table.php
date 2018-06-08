@@ -16,12 +16,11 @@ class CreateApplicantProfileTable extends Migration
         Schema::create('applicant_profile', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title')->nullable();
+            $table->string('father_name')->nullable(false);
             $table->string('gender')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->string('nationality')->nullable();
-            $table->string('marital_status')->nullable();
-            $table->string('user_cnic')->nullable(false);
-            $table->string('guardian_cnic')->nullable();
+            $table->string('applicant_nic')->nullable();
+            $table->string('parent_nic')->nullable();
             $table->boolean('application_status')->default(0);
             $table->integer('applicant_id')->unsigned();
             $table->foreign('applicant_id')->references('id')->on('users')->

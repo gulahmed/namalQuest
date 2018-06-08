@@ -20,16 +20,19 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['web','auth']], function () {
-	Route::get('/apply', 'ApplicantController@index')->name('apply');
-	Route::post('/apply/profile', 'ApplicantController@add_profile');
+	Route::get('/apply', 'ProfileController@index');
+	Route::get('/apply/profile', 'ProfileController@create')->name('profile.show');
+	Route::post('/apply/profile', 'ProfileController@store')->name('profile.store');
+	Route::get('/apply/details', 'ContactDetailController@create');
+
+});
+	//Route::post('/apply/profile', 'ApplicantController@store');
 
 	
-	});
+	
 
 
-Route::get('/contact', function(){
-	return view('applicant.contact');
-});
+
 
 
 
