@@ -115,8 +115,14 @@ class EducationController extends Controller
      * @param  \App\Education  $education
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Education $education)
+    public function destroy($id)
     {
-        //
+      $education = Education::find($id);
+      if ($education->applicant_id === Auth::user()->id) {
+        $education->delete();
+        $message = 'Education Removed - '.$education->institute;
+          return redirect()->back()->with('message', $message);
+        }
+        return redirect()->back();
     }
 }

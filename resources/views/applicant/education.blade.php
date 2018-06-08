@@ -26,24 +26,24 @@
         <div class="card-body">
           <h3>Education </h3>
           <div class="table-responsive">
-           @if($count > 1)
+           @if($count > 0)
             <table class="table table-sm">
               <thead><tr>
-                  <th>Institution</th>
                   <th>Qualification</th>
-                  <th>Year Completed</th>
-                  <th>Result</th>
+                  <th>Board</th>
+                  <th>Passing Year</th>
+                  <th>Obtained Marks</th>
                   <th class="fit">Action</th>
                 </tr></thead>
                 <tbody>
                   @foreach($education as $edu)
-                  <tr><td>{{$edu->institute}}</td>
+                  <tr><td>{{$edu->qualification}}</td>
                     <td>{{ $edu->board }}</td>
-                    <td>{{ $edu->qualification }}</td>
+                    <td>{{ $edu->year_of_passing }}</td>
+                    <td>{{ $edu->obtained_marks }}</td>
 
                     <td class="fit">
-                    <form action="" method="post">
-                        {{csrf_field()}}
+                      <form action="{{route('delete.education', $edu->id)}}" method="post">                        {{csrf_field()}}
                         <input type="hidden" name="_method" value="DELETE" >
                         <input type="submit" class="btn btn-danger btn-sm" value="Remove" >
                       </form>

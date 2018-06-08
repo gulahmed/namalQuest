@@ -60,6 +60,6 @@ $(function () {
 		Review Information</a>
 	<a href=" " class="list-group-item list-group-item-action apply ">
 		<i class="fas fa-briefcase"></i>&nbsp;
-		Apply for a Position</a>
+		Submit Application</a>
 </div>
 <span class="i-need-space"></span>

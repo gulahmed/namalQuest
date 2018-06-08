@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Auth::routes();
@@ -29,9 +29,7 @@ Route::group(['middleware' => ['web','auth']], function () {
 
   Route::get('/apply/education', 'EducationController@create')->name('education.show');
   Route::post('/apply/education', 'EducationController@store')->name('education.post');
-
-  Route::get('/apply/education/hssc', 'EducationController@create')->name('education.show');
-  Route::post('/apply/education/hssc', 'EducationController@store')->name('education.store');
+  Route::delete('/delete/education/{id}', 'EducationController@destroy')->name('delete.education');
 
   Route::get('/apply/programs', 'ProgramController@create');
 
