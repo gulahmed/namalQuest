@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      @include('applicant.navigation') 
+      @include('applicant.navigation')
     </div>
     <div class="col-md-9">
       @if (session('success'))
@@ -25,11 +25,11 @@
       <div class="card content-card">
         <div class="card-body">
           <h3>Personal Details</h3>
-          <form method="post" action="{{url('/apply/contact')}}">
+          <form method="post" action="{{url('/apply/details')}}">
             {{csrf_field()}}
 
             @include('applicant.partials._contact_details_form')
-          
+
             <span class="i-need-space"></span>
             <button type="submit" class="btn btn-primary">Save and Next</button>
           </form>

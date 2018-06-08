@@ -25,40 +25,33 @@ $(function () {
 </script>
 
 <div class="list-group side-nav">
-	<a href="" class="list-group-item list-group-item-action  active ">
-		
+	<a href="/apply/profile" class="list-group-item list-group-item-action  active ">
+
 	 <i class="far fa-circle"></i>&nbsp;
-		
+
 		Personal Details</a>
-	<a href="" class="list-group-item list-group-item-action active">
-		
-		<i class="far fa-circle"></i>&nbsp; 
-		
+	<a href="/apply/details" class="list-group-item list-group-item-action active">
+
+		<i class="far fa-circle"></i>&nbsp;
+
 		Contact Details</a>
 
-	<a href="" class="list-group-item list-group-item-action active">
-		
-		<i class="far fa-circle"></i>&nbsp; 
-		
-		Family Background</a>
-	
-	<a href="" class="list-group-item list-group-item-action  active ">
-		
+
+	<a href="/apply/education" class="list-group-item list-group-item-action  active ">
+
 		 <i class="far fa-circle"></i>&nbsp;
-		
+
 		Education</a>
-	<a href="" class="list-group-item list-group-item-action active">
-		 <i class="far fa-circle"></i>&nbsp;
-		
-		Professional Qualifications</a>
-	
-	
-	<a href="" class="list-group-item list-group-item-action  active">
-		
-		 <i class="far fa-circle"></i>&nbsp;
-		
-		Upload Photo</a> 
-	
+
+		<a href="/apply/programs" class="list-group-item list-group-item-action  active ">
+
+			 <i class="far fa-circle"></i>&nbsp;
+
+			Programs </a>
+
+
+
+
 </div>
 <hr/>
 <div class="list-group side-nav">
@@ -69,4 +62,4 @@ $(function () {
 		<i class="fas fa-briefcase"></i>&nbsp;
 		Apply for a Position</a>
 </div>
-<span class="i-need-space"></span> 
+<span class="i-need-space"></span>

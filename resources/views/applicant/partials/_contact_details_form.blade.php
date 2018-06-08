@@ -1,35 +1,35 @@
-
 <div class="form-row">
  <div class="form-group col-md-6">
   <label for="email">Email</label>
-  <input class="form-control" type="text" placeholder="{{ Auth::user()->email }}" disabled>
- </div> 
+  <input class="form-control" type="text" placeholder="{{ Auth::user()->email }}" name="email" value=""  disabled>
+ </div>
 </div>
 
 <div class="form-row">
   <div class="form-group col-md-6">
-    <label for="phone_number">Phone Number</label>
-    <input type="text" class="form-control" name="phone_number" maxlength="11" placeholder="Enter phone number" value=""/>
-  </div> 
+    <label for="applicant_mobile">Mobile Number</label>
+    <input type="text" class="form-control" name="applicant_mobile" maxlength="11" placeholder="Enter mobile number" value="{{old('applicant_mobile')}}"/>
+  </div>
 
   <div class="form-group col-md-6">
-    <label for="mobile_number">Mobile Number</label>
-    <input type="text" class="form-control" name="mobile_number" maxlength="11" placeholder="Enter mobile number" value=""/>
-  </div> 
+    <label for="parent_mobile">Parent Mobile Number</label>
+    <input type="text" class="form-control" name="parent_mobile" maxlength="11" placeholder="Enter phone number" value="{{old('parent_mobile')}}"/>
+  </div>
+
 </div>
 
 
 <div class="form-row">
  <div class="form-group col-md-6">
  <label for="permenant_address">Permenant Address</label>
-  <textarea class="form-control" rows="2" id="permenant_address" name="permenant_address" placeholder="Enter ..."></textarea>
+  <textarea class="form-control" rows="2" name="permenant_address" placeholder="permenant Address" value="{{old('permenant_address')}}"></textarea>
  </div>
 
 
 
  <div class="form-group col-md-6">
  <label for="postal_address">Postal Address</label>
-  <textarea class="form-control" rows="2" id="postal_address" name="postal_address" placeholder="Enter ..."></textarea>
+  <textarea class="form-control" rows="2" name="postal_address" placeholder="Postal Address" value="{{old('postal_address')}}"></textarea>
  </div>
 </div>
 
@@ -40,18 +40,17 @@
 <div class="form-group col-md-4">
 <label for="country">Country</label>
 
-<select class="form-control select2" id="country" name="country" disabled>
-      <option value="AF">Afghanistan</option>
-       <option value="PK" selected>Pakistan</option>
+<select class="form-control select2" id="country" name="country" value="{{old('country')}}">
+       <option value="Pakistan" selected>Pakistan</option>
    </select>
 
 </div>
 
-                        
+
 
  <div class="form-group col-md-4">
   <label for="domicile_province">Domicile Province</label>
- <select class="form-control select2" id="domicile_province" name="domicile_province">
+ <select class="form-control select2" id="domicile_province" name="domicile_province" value="{{old('domicile_province')}}">
       <option>AJK</option>
       <option>Baluchistan</option>
       <option>FATA</option>
@@ -61,13 +60,13 @@
       <option>Punjab</option>
       <option>Sindh</option>
     </select>
- </div> 
+ </div>
 
 
 
  <div class="form-group col-md-4">
   <label for="address_district">District </label>
-   <select class="form-control select2" style="width: 100%;">
+   <select class="form-control select2" name="district" value="{{old('district')}}">
 	  <option>Abbottabad</option>
 	  <option>Attock</option>
 	  <option>Awaran</option>
@@ -190,8 +189,8 @@
 	  <option>Upper Dir</option>
 	  <option>Vehari</option>
 	  <option>Zhob</option>
-	  <option>Ziarat</option>  
+	  <option>Ziarat</option>
 	</select>
 
- </div> 
+ </div>
 </div>

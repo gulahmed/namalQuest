@@ -15,10 +15,9 @@ class CreateApplicantContactsDetailsTable extends Migration
     {
         Schema::create('applicant_contacts_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('applicant_mobile')->nullable();
-            $table->string('parent_mobile');
+            $table->string('applicant_mobile')->nullable(false);
+            $table->string('parent_mobile')->nullable();
             $table->text('postal_address');
-            $table->string('permanent_same_as_current_address');
             $table->text('permenant_address');
             $table->string('district');
             $table->string('domicile_province');

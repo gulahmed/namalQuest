@@ -23,16 +23,17 @@ Route::group(['middleware' => ['web','auth']], function () {
 	Route::get('/apply', 'ProfileController@index');
 	Route::get('/apply/profile', 'ProfileController@create')->name('profile.show');
 	Route::post('/apply/profile', 'ProfileController@store')->name('profile.store');
-	Route::get('/apply/details', 'ContactDetailController@create');
+
+  Route::get('/apply/details', 'ContactDetailController@create');
+  Route::post('/apply/details', 'ContactDetailController@store');
+
+  Route::get('/apply/education', 'EducationController@create')->name('education.show');
+  Route::post('/apply/education', 'EducationController@store')->name('education.post');
+
+  Route::get('/apply/education/hssc', 'EducationController@create')->name('education.show');
+  Route::post('/apply/education/hssc', 'EducationController@store')->name('education.store');
+
+  Route::get('/apply/programs', 'ProgramController@create');
 
 });
 	//Route::post('/apply/profile', 'ApplicantController@store');
-
-	
-	
-
-
-
-
-
-

@@ -18,7 +18,7 @@ class ContactDetailController extends Controller
      */
     public function index()
     {
-     return redirect('/apply/contact');  
+     return redirect('/apply/contact');
     }
 
     /**
@@ -39,7 +39,30 @@ class ContactDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      $validate = $request->validate([
+          'applicant_mobile' => 'required|Numeric',
+          'parent_mobile' => 'required|Numeric',
+          'postal_address' => 'required',
+          'permenant_address' => 'required',
+          'district' =>'required',
+          'domicile_province'=>'required',
+          'country'          =>'required'
+      ]);
+
+      $contacts = ContactDetails::firstOrNew([
+                            'applicant_id' => Auth::user()->id]);
+     $contacts->applicant_mobile = $request->get('applicant_mobile');
+     $contacts->parent_mobile = $request->get('parent_mobile');
+     $contacts->postal_address= $request->get('postal_address');
+     $contacts->permenant_address= $request->get('permenant_address');
+     $contacts->district= $request->get('district');
+     $contacts->domicile_province= $request->get('domicile_province');
+     $contacts->country= $request->get('country');
+     $contacts->save();
+      $success = "Contact Details Saved Succefully";
+      return redirect('/apply/education')->with('success',$success);
+
     }
 
     /**

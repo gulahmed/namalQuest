@@ -15,13 +15,15 @@ class CreateApplicantAcademicDetailsTable extends Migration
     {
         Schema::create('applicant_academic_details', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('institute')->nullable();
             $table->string('qualification')->nullable(false);
+            $table->boolean('result_awaiting')->nullable(false)->default(0);//0 no, 1 meaning awaiting
             $table->string('board')->nullable(false);
             $table->integer('year_of_passing');
             $table->string('roll_number');
             $table->integer('total_marks');
             $table->integer('obtained_marks');
-            $table->text('intermediate_subjects')->nullable();
+            $table->text('subjects_studied')->nullable();
             $table->integer('applicant_id')->unsigned();
             $table->foreign('applicant_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

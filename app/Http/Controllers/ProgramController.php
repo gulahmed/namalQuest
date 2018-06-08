@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Academic;
+use App\Program;
 use Illuminate\Http\Request;
 
-class AcademicController extends Controller
+class ProgramController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,8 +24,8 @@ class AcademicController extends Controller
      */
     public function create()
     {
-        //
-    }
+        return view('applicant.programs');
+     }
 
     /**
      * Store a newly created resource in storage.
@@ -41,10 +41,10 @@ class AcademicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Academic  $academic
+     * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function show(Academic $academic)
+    public function show(Program $program)
     {
         //
     }
@@ -52,10 +52,10 @@ class AcademicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Academic  $academic
+     * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function edit(Academic $academic)
+    public function edit(Program $program)
     {
         //
     }
@@ -64,10 +64,10 @@ class AcademicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Academic  $academic
+     * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Academic $academic)
+    public function update(Request $request, Program $program)
     {
         //
     }
@@ -75,10 +75,10 @@ class AcademicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Academic  $academic
+     * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Academic $academic)
+    public function destroy(Program $program)
     {
         //
     }
