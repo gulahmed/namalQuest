@@ -24,7 +24,7 @@
 			@endif
 			<div class="card content-card">
 				<div class="card-body">
-					<h3>Personal Details</h3>
+					<h3>Personal Information</h3>
 					<form method="post" action="{{url('/apply/profile')}}">
 						{{csrf_field()}}
 

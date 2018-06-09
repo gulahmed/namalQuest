@@ -29,7 +29,7 @@ $(function () {
 
 	 <i class="far fa-circle"></i>&nbsp;
 
-		Personal Details</a>
+		Personal Information</a>
 	<a href="/apply/details" class="list-group-item list-group-item-action active">
 
 		<i class="far fa-circle"></i>&nbsp;

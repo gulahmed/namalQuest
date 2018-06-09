@@ -2,13 +2,16 @@
 <div class="card-body">
   <form method="post" action="{{url('apply/education')}}" class="form">
     {{csrf_field()}}
-    <div class="form-group"><input type="text" class="form-control" name="institute" maxlength="30" placeholder="Institute/School/College Name" value="{{ old('institute') }}"/></div>
+    <div class="form-group"><input type="text" class="form-control" name="institute" maxlength="30" placeholder="Institute Name" value="{{ old('institute') }}"/></div>
     <div class="form-group">
       <select class="form-control select2" name="qualification" >
-                        <option value="Matric">Matric</option>
+			<option value="" disbaled selected hidden>Title of Qualification</option>
+                        <option value="Matric">Matriculation</option>
+			<option value="DAE Holder">'O'-Level</option>
                         <option value="FSc: Pre-Engineering">FSc: Pre-Engineering</option>
                         <option value="FSc: Pre-Medical">FSc: Pre-Medical</option>
                         <option value="FSc: ICS with Math and Physics">FSc: ICS with Math and Physics</option>
+			<option value="DAE Holder">'A'-Level</option>
                         <option value="DAE Holder">DAE Holder</option>
                         <option value="FA">FA</option>
     </select>
@@ -18,14 +21,15 @@
     <div class="form-row">
     <div class="form-group col-md-6">
              <select class="form-control" name="result_awaiting" id="result_status">
-                  <option value="">Select Result Status</option>
-                  <option value="0">Waiting</option>
-                  <option value="1">Declared</option>
+		  <option value="" disbaled selected hidden>Qualification Status</option>
+                  <option value="0">Result Waiting</option>
+                  <option value="1">Completed</option>
               </select>
     </div>
 
     <div class="form-group col-md-6">
       <select class="form-control select2" name="board">
+			<option value="" disbaled selected hidden>Board/University</option>
                         <option>BISE, Abbottabad</option>
                         <option>BISE, Bahawalpur</option>
                         <option>BISE, Bannu</option>
@@ -64,7 +68,6 @@
                         <option>Other</option>
                       </select>
 
-
     </div>
   </div>
 
@@ -74,11 +77,11 @@
     </div>
 
     <div class="form-group col-md-6 ">
-      <input type="text" class="form-control" name="roll_number" placeholder="Roll Number " value="{{ old('roll_number') }}">
+      <input type="text" class="form-control" name="roll_number" placeholder="Roll Number" value="{{ old('roll_number') }}">
     </div>
 </div>
 
-<div class="form-row  ">
+<div class="form-row">
     <div class="form-group col-md-6">
       <input type="text" class="form-control" name="total_marks" id="total_marks" placeholder="Total Marks " value="{{ old('total_marks') }}">
     </div>
@@ -87,8 +90,8 @@
       <input type="text" class="form-control" name="obtained_marks" placeholder="Obtained Marks" value="{{ old('obtained_marks') }}"/>
     </div>
 </div>
-  <div class="form-group ">
-   <input type="text" class="form-control" name= "subjects_studied" id="subjects_studied" placeholder="Subjects studied (e.g. Maths, Physics) " value="{{ old('roll_number') }}">
+  <div class="form-group">
+   <input type="text" class="form-control" name= "subjects_studied" id="subjects_studied" placeholder="Subjects/Technologies studied (e.g. Maths, Physics, Chemistry, Electrical Technology)" value="{{ old('roll_number') }}">
  </div>
 
  <div class="form-group"><button type="submit" class="btn btn-primary">Save / Add</button></div>
