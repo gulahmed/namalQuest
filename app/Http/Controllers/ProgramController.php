@@ -41,7 +41,7 @@ class ProgramController extends Controller
     {
       $validate = $request->validate([
           'test_roll_number' => 'required',
-          'test_total_marks' => 'required',
+          //'test_total_marks' => 'required',
           'test_obtained_marks' => 'required',
       ]);
 
@@ -60,7 +60,8 @@ class ProgramController extends Controller
       $test_details->applicant_id = Auth::user()->id;
       $test_details->test_name = $punjab_test;
       $test_details->test_roll_number = $request->get('test_roll_number');
-      $test_details->test_total_marks = $request->get('test_total_marks');
+      //$test_details->test_total_marks = $request->get('test_total_marks');
+      $test_details->test_total_marks=100;
       $test_details->test_obtained_marks = $request->get('test_obtained_marks');
 
       $test_details->save();
