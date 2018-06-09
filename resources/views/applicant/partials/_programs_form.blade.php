@@ -47,7 +47,7 @@
 
 <span class="i-need-space"></span>
 <!-- TEST DETAILS-->
- 
+
           <div class="row">
             <!-- left column -->
             <div class="col-md-12">
@@ -68,10 +68,10 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <select class="form-control select2" style="width: 100%" id="dompunjab">
+                          <select class="form-control select2" name="test_name_punjab" @if ($domicile != 'punjab') disabled @endif style="width: 100%" id="dompunjab">
                             <option disabled selected hidden>Choose ...</option>
-                            <option value="NAT-I 2018(NTS) (For BBA Only) (100 Marks)">NAT-I 2018(NTS) (For BBA Only) (100 Marks)</option>
-                            <option value="UET Lahore Combined Entry Test 2018 (400 Marks)">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
+                            <option value="NAT-I">NAT-I 2018(NTS) (For BBA Only) (100 Marks)</option>
+                            <option value="UET Lahore">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
                           </select>
                         </div>
                       </div>
@@ -84,23 +84,24 @@
                           &#9638 &nbsp;Test conducted by any public sector Engineering University<br>
                           </div>
                         </div>
+
                         <div class="form-group">
-                          <select class="form-control select2" style="width: 100%" id="domnonpunjab" onchange="nonpunjabtester()">
+                          <select class="form-control select2" name="test_name_non_punjab" style="width: 100%" id="domnonpunjab" @if ($domicile == 'punjab') disabled @endif  onchange="nonpunjabtester()">
                             <option disabled selected hidden>Choose ...</option>
-                            <option value="NAT-I 2018 (NTS) (100 Marks)">NAT-I 2018 (NTS) (100 Marks)</option>
-                            <option value="UET Lahore Combined Entry Test 2018 (400 Marks)">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
-                            <option value="UET Peshawar Test 2018 (800 Marks)">UET Peshawar Test 2018 (800 Marks)</option>
-                            <option value="NED UET Karachi Test 2018 (100 Marks)">NED UET Karachi Test 2018 (100 Marks)</option>
-                            <option value="Mehran UET Jamshoro Test 2018 (100 Marks)">Mehran UET Jamshoro Test 2018 (100 Marks)</option>
-                            <option value="Balochistan UET Khuzdar Test 2018 (120 Marks)">Balochistan UET Khuzdar Test 2018 (120 Marks)</option>
-                            <option value="Enter test name ...">Other</option>                           
+                            <option value="NAT-I">NAT-I 2018 (NTS) (100 Marks)</option>
+                            <option value="UET Lahore">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
+                            <option value="UET Peshawar">UET Peshawar Test 2018 (800 Marks)</option>
+                            <option value="NED Karachi">NED UET Karachi Test 2018 (100 Marks)</option>
+                            <option value="Mehran Jamshoro">Mehran UET Jamshoro Test 2018 (100 Marks)</option>
+                            <option value="Balochistan UET">Balochistan UET Khuzdar Test 2018 (120 Marks)</option>
+                            <option value="Enter test name ...">Other</option>
                           </select>
                         </div>
                       </div>
                     </div>
 
                     <div class="row">
-                      <div class="col-md-6"></div>                    
+                      <div class="col-md-6"></div>
                       <div class="col-md-6">
                         <label for="othertestname">Other Test</label>
                         <div class="form-group">
@@ -111,7 +112,7 @@
                       </div>
                     </div>
 
-				    
+
 		  <div class="form-row">
 		      <div class=" col-md-6">
 		      <label for="testrollnum">Test Roll Number</label>

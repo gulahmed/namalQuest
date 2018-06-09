@@ -17,7 +17,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return redirect('/apply/profile');   
+        return redirect('/apply/profile');
     }
 
     /**
@@ -41,7 +41,6 @@ class ProfileController extends Controller
     {
 
         $validate = $request->validate([
-            'title' => 'required',
             'father_name' => 'required',
             'gender' => 'required',
             'date_of_birth' => 'required|date',
@@ -50,9 +49,7 @@ class ProfileController extends Controller
         ]);
 
         $profile = new Profile();
-        //::firstOrNew(['user_id' => Auth::user()->id]);
         $profile->applicant_id = Auth::user()->id;
-        $profile->title = $request->get('title');
         $profile->father_name = $request->get('father_name');
         $profile->gender = $request->get('gender');
         $dob = $request->get('date_of_birth');

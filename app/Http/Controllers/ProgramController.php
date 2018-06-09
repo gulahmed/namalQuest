@@ -8,6 +8,8 @@ use Auth;
 use App\TestDetails;
 use Session;
 use Carbon\Carbon;
+use App\ContactDetails;
+use DB;
 
 class ProgramController extends Controller
 {
@@ -28,7 +30,13 @@ class ProgramController extends Controller
      */
     public function create()
     {
-        return view('applicant.programs');
+
+      $domicile = ContactDetails::where('applicant_id','=', Auth::user()->id)
+                  ->select('domicile_province')
+                  ->first();
+
+
+        return view('applicant.programs',compact('domicile'));
      }
 
     /**
@@ -40,9 +48,10 @@ class ProgramController extends Controller
     public function store(Request $request)
     {
       $validate = $request->validate([
-          'test_roll_number' => 'required',
+          'test_roll_number' => 'required|Numeric',
           //'test_total_marks' => 'required',
-          'test_obtained_marks' => 'required',
+          'test_obtained_marks' => 'required|Numeric',
+
       ]);
 
       $applicant_id = Auth::User()->id;
@@ -55,19 +64,49 @@ class ProgramController extends Controller
       Program::insert($data); //insert program perferences
 
 
-      $punjab_test = $request->get('punjab_test');
+      if ( !empty( $request->get('test_name_punjab') ) )
+      {
+        $test_name= $request->get('test_name_punjab');
+        $total_marks = $this->get_total_marks($test_name);
+
+
+      }
+      elseif (!empty($request->get('test_name_non_punjab')))
+      {
+        $test_name= $request->get('test_name_non_punjab');
+        $total_marks = $this->get_total_marks($test_name);
+
+      }
+
+
+
+      $punjab_test = $request->get('test_name_non_punjab');
       $test_details = new TestDetails();
       $test_details->applicant_id = Auth::user()->id;
-      $test_details->test_name = $punjab_test;
+      $test_details->test_name = $test_name;
       $test_details->test_roll_number = $request->get('test_roll_number');
-      //$test_details->test_total_marks = $request->get('test_total_marks');
-      $test_details->test_total_marks=100;
+      $test_details->test_total_marks = $total_marks;
       $test_details->test_obtained_marks = $request->get('test_obtained_marks');
 
       $test_details->save();
       $success = 'Program preference added';
       return redirect('apply/submit')->with('success', $success);
 
+
+
+    }
+
+
+    public function get_total_marks($test_name){
+      $tests_with_marks = array(
+        'NAT-I'=>100,
+        'UET Lahore'=>400,
+        'UET Peshawar'=>800,
+        'NED Karachi' =>100,
+        'Mehran Jamshoro'=>100,
+        'Balochistan UET'=>120,
+      );
+      return $tests_with_marks[$test_name];
 
 
     }

@@ -15,4 +15,9 @@ class ContactDetails extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function getDomicile()
+    {
+        return $this->domicile_province;
+    }
 }

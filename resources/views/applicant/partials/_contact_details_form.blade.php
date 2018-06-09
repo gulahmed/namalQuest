@@ -22,12 +22,12 @@
 <div class="form-row">
  <div class="form-group col-md-6">
  <label for="permenant_address">Permanent Address</label>
-  <textarea class="form-control" rows="2" name="permenant_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" value="{{old('permenant_address')}}"></textarea>
+  <textarea class="form-control" rows="2" name="permenant_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" >{{old('permenant_address')}}</textarea>
  </div>
 
  <div class="form-group col-md-6">
  <label for="postal_address">Postal Address</label>
-  <textarea class="form-control" rows="2" name="postal_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" value="{{old('postal_address')}}"></textarea>
+  <textarea class="form-control" rows="2" name="postal_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" >{{old('postal_address')}}</textarea>
  </div>
 </div>
 
