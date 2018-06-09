@@ -66,7 +66,7 @@ class ProgramController extends Controller
 
       $test_details->save();
       $success = 'Program preference added';
-      return redirect('apply/details')->with('success', $success);
+      return redirect('apply/submit')->with('success', $success);
 
 
 
