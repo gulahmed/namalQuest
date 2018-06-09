@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ApplicantController extends Controller
 {
     public function index(){
-
+      return view ('applicant.submission');
     }
 
     public function apply_admission(Request $request){
