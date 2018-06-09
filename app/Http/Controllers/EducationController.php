@@ -28,11 +28,8 @@ class EducationController extends Controller
      */
     public function create()
     {
-      $education = Education::all();
-      //where('applicant_id', Auth::user()->id);
-      $count = $education->count();
-
-      return view('applicant.education',['count'=>$count, 'education'=>$education]);
+      $education = Education::where('applicant_id', Auth::user()->id)->get();      
+      return view('applicant.education',['count'=>$education->count(), 'education'=>$education]);
     }
 
     /**
