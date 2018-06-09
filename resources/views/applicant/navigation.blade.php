@@ -55,10 +55,10 @@ $(function () {
 </div>
 <hr/>
 <div class="list-group side-nav">
-	<a href="" class="list-group-item list-group-item-action active">
+	<!-- <a href="" class="list-group-item list-group-item-action active">
 		<i class="fas fa-search"></i>&nbsp;
-		Review Information</a>
-	<a href=" " class="list-group-item list-group-item-action apply ">
+		Review Information</a> -->
+	<a href="/apply/submit " class="list-group-item list-group-item-action apply ">
 		<i class="fas fa-briefcase"></i>&nbsp;
 		Submit Application</a>
 </div>

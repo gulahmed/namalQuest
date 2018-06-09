@@ -34,5 +34,8 @@ Route::group(['middleware' => ['web','auth']], function () {
   Route::get('/apply/programs', 'ProgramController@create');
   Route::post('/apply/programs', 'ProgramController@store');
 
+  Route::get('/apply/submit', 'ApplicantController@index');
+  Route::post('/apply/submit', 'ApplicantController@apply_admission');
+
 });
 	//Route::post('/apply/profile', 'ApplicantController@store');
