@@ -1,4 +1,5 @@
 
+
 <div class="row">
   <div class="col-sm-">
     <div class="card">
@@ -20,20 +21,20 @@
       <div class="card-body">
         <label for="firstpref">First Preference</label>
         <div class="form-group">
-          <select id="firstpref" class="form-control select2" style="width: 100%;">
-            <option >BSc Computer Science</option>
-            <option class="glyphicon glyphicon-ok">BSc Electrical Engineering</option>
-            <option class="glyphicon glyphicon-ok">BBA</option>
+          <select class="form-control select2" name="program_pref[]">
+            <option value="BSc Computer Science">BSc Computer Science</option>
+            <option value="BSc Electrical Engineering" >BSc Electrical Engineering</option>
+            <option value="BBA">BBA</option>
           </select>
         </div>
 
         <label for="secondpref">Second Preference</label>
         <div class="form-group">
-          <select id="secondpref" class="form-control select2" style="width: 100%;">
+          <select  class="form-control select2" name="program_pref[]">
 
-            <option>BSc Computer Science</option>
-            <option>BSc Electrical Engineering</option>
-            <option>BBA</option>
+            <option value="BSc Computer Science">BSc Computer Science</option>
+            <option value="BSc Electrical Engineering" >BSc Electrical Engineering</option>
+            <option value="BBA">BBA</option>
           </select>
 
 
@@ -59,7 +60,7 @@
                       &#9638 &nbsp;For BBA, either NAT-I 2018 (conducted by NTS) <strong>OR</strong> Combined Entry Test 2018 (conducted by UET Lahore) is accepted.
                     </p>
                     <div class="form-group">
-                      <select class="form-control select2" style="width: 100%" disabled id="dompunjab">
+                      <select class="form-control select2" id="dompunjab" name="punjab_test">
                         <option value="NAT-I 2018(NTS) (For BBA Only) (100 Marks)">NAT-I 2018(NTS) (For BBA Only) (100 Marks)</option>
                         <option value="UET Lahore Combined Entry Test 2018 (400 Marks)">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
                       </select>
@@ -73,7 +74,7 @@
                       &#9638 &nbsp;Test conducted by any public sector Engineering University<br>
                     </p>
                     <div class="form-group">
-                      <select class="form-control select2" style="width: 100%" id="domnonpunjab">
+                      <select class="form-control select2" name="non_punjab_test" id="domnonpunjab">
                         <option value="NAT-I 2018 (NTS) (100 Marks)">NAT-I 2018 (NTS) (100 Marks)</option>
                         <option value="UET Lahore Combined Entry Test 2018 (400 Marks)">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
                         <option value="UET Peshawar Test 2018 (800 Marks)">UET Peshawar Test 2018 (800 Marks)</option>
@@ -95,7 +96,7 @@
       <label for="testrollnum">Test Roll Number</label>
       <div class="form-group">
         <div class="input-group">
-          <input type="text" class="form-control" id="testrollnum" placeholder="Enter roll number ...">
+          <input type="text" class="form-control" name="test_roll_number" id="testrollnum" placeholder="Enter Test roll number ">
         </div>
       </div>
     </div>
@@ -104,7 +105,7 @@
       <label for="testrollnum">Test obtained Markes</label>
       <div class="form-group">
         <div class="input-group">
-          <input type="text" class="form-control" id="testrollnum" placeholder="Enter roll number ...">
+          <input type="text" class="form-control" name="test_obtained_marks" id="testrollnum" placeholder="Enter roll number ...">
         </div>
       </div>
     </div>
