@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web','auth']], function () {
   Route::delete('/delete/education/{id}', 'EducationController@destroy')->name('delete.education');
 
   Route::get('/apply/programs', 'ProgramController@create');
+  Route::post('/apply/programs', 'ProgramController@store');
 
 });
 	//Route::post('/apply/profile', 'ApplicantController@store');

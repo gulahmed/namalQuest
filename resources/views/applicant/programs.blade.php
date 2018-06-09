@@ -25,7 +25,7 @@
 			<div class="card content-card">
 				<div class="card-body">
 					<h3>Program Details</h3>
-					<form method="post" action="{{url('/apply/profile')}}">
+					<form method="post" action="{{url('/apply/programs')}}">
 						{{csrf_field()}}
 
 						@include('applicant.partials._programs_form')

@@ -37,8 +37,15 @@ class User extends Authenticatable
         return null !== $this->roles()->where('name', $role)->first();
     }
 
-    public function roles() 
-    { 
-        return $this->belongsToMany('App\Role'); 
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role');
     }
+
+    
+    public function profile() { return $this->hasOne('App\Profile'); }
+    public function educations() { return $this->hasMany('App\Education'); }
+    //public function alevels() { return $this->hasMany('App\Alevel'); }
+    //public function olevels() { return $this->hasMany('App\Olevel'); }
+
 }
