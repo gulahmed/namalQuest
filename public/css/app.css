@@ -249,8 +249,11 @@ th {
 }
 
 label {
+  font-family: "Roboto Condensed", sans-serif;	
   display: inline-block;
   margin-bottom: 0.5rem;
+  font-size: 17px;
+  color: #00695d;
 }
 
 button {
@@ -408,7 +411,11 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.575rem;
+  font-family: "Roboto Condensed", sans-serif;	
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #004D40;
+  font-size: 1.8rem;
 }
 
 h4,
@@ -1935,6 +1942,7 @@ pre code {
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
+  color: #00695d;
 }
 
 .table tbody + tbody {
@@ -2249,10 +2257,10 @@ pre code {
 .form-control:focus {
   color: #495057;
   background-color: #fff;
-  border-color: #80bdff;
+  border-color: #a6d7b2;
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(126, 211, 192, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(126, 211, 192, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgb(212,237,218);
+          box-shadow: 0 0 0 0.2rem rgb(212,237,218);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -5673,7 +5681,7 @@ input[type="button"].btn-block {
 }
 
 .alert-success {
-  color: #155724;
+  color: #00695c;
   background-color: #d4edda;
   border-color: #c3e6cb;
 }
@@ -5688,8 +5696,8 @@ input[type="button"].btn-block {
 
 .alert-info {
   color: #00695c;
-  background-color: #d1ecf1;
-  border-color: #bee5eb;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
   line-height: 3;
 }
 

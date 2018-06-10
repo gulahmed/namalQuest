@@ -24,43 +24,30 @@
 			@endif
 			<div class="card content-card">
 				<div class="card-body">
-					<h3>Submission</h3>
 
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Thank you <b>{{Auth::user()->name}}</b> for your interest in Namal College.
-                    Before you submit  please make sure you have completed all the necessary information.
-										@if(!empty ($user_sections))
-										<ul>
-
-											<li>{{print_r($user_sections)}}</li>
-										</ul>
-										@
-										@endif
-
-
-
-                </div>
-
-            </div>
-
+					<h3 align="center"><strong>Submission</strong></h3>
+		            <div class="content">
+		                <h5 align="center">
+		                    Thank you <b>{{Auth::user()->name}}</b> for your interest in Namal College.
+		                    Before you submit, please make sure you have completed all the necessary information.
+		                </h5>
 
 						<span class="i-need-space"></span>
 						<div class="form-group">
 							<div class="form-control col-md-6">
-						<form method="get" action="{{url('/apply/')}}">
-							{{csrf_field()}}
-						<button type="submit" class="btn btn-primary">Go Back </button>
-					</form>
-				</div>
-				<div class="form-control col-md-6">
-					<form method="post" action="{{url('/apply/submit')}}">
-						{{csrf_field()}}
-					<button type="submit" class="btn btn-primary">Apply for Admission</button>
-				</form>
-			</div>
-			</div>
+								<form method="get" action="{{url('/apply/')}}">
+									{{csrf_field()}}
+								<button type="submit" class="btn btn-primary">Go Back </button>
+								</form>
+							</div>
+							<div class="form-control col-md-6">
+								<form method="post" action="{{url('/apply/submit')}}">
+									{{csrf_field()}}
+								<button type="submit" class="btn btn-primary" >Apply for Admission</button>
+								</form>
+							</div>
+						</div>
+		            </div>
 
 				</div>
 			</div>

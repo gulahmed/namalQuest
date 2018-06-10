@@ -20,6 +20,8 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/select2/select2.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
