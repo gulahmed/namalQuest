@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Mail\ApplicationSubmitted;
 use Auth;
 use App\SectionStatus;
+use App\Profile;
+use Mail;
 
 class ApplicantController extends Controller
 {
@@ -17,12 +19,21 @@ class ApplicantController extends Controller
     public function apply_admission(Request $request){
 
       $user= Auth::user();
+      $status = Profile::application_submission_status();
+      if ($status!=1)
+        {
+         Profile::where('applicant_id', '=', $user->id)->update(array('application_status' => 1));
 
-      \Mail::to($user)->send(new ApplicationSubmitted($user));
+         Mail::to($user)->send(new ApplicationSubmitted($user));
+         $success = 'Application Submitted Succesfully';
+         return redirect('/apply/submitted')->with('success', $success);
+           }
+           else {
+             $message = "You already have submited the application";
+             return redirect()->back()->with('message',$message);
 
+           }
 
-      $success = 'Application Submitted';
-      return redirect()->back()->with('success', $success);
     }
 
 

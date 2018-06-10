@@ -33,21 +33,29 @@
 		                </h5>
 
 						<span class="i-need-space"></span>
-						<div class="form-group">
-							<div class="form-control col-md-6">
-								<form method="get" action="{{url('/apply/')}}">
-									{{csrf_field()}}
-								<button type="submit" class="btn btn-primary">Go Back </button>
-								</form>
-							</div>
-							<div class="form-control col-md-6">
+							@if(App\Profile::application_submission_status()==1)
+							<h5 align="center">
+								<div class="alert alert-info">
+
+									Your application is already submitted.
+								</div>
+							</h5>
+							@endif
+
+						<div class="form-row text-center">
+							<div class="col-12">
 								<form method="post" action="{{url('/apply/submit')}}">
 									{{csrf_field()}}
-								<button type="submit" class="btn btn-primary" >Apply for Admission</button>
+									@if(App\Profile::application_submission_status()!=1)
+									<button type="submit" class="btn btn-primary align-center "  >Submit Application</button>
+									@else
+									<button type="submit" class="btn btn-primary align-center" disabled >Submit Application</button>
+									@endif
 								</form>
 							</div>
 						</div>
-		            </div>
+
+
 
 				</div>
 			</div>
