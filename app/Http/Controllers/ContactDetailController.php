@@ -28,7 +28,16 @@ class ContactDetailController extends Controller
      */
     public function create()
     {
-        return view('applicant.contact');
+      $current_user = Auth::user()->id;
+      $applicant = ContactDetails::where('applicant_id', $current_user)->count();
+      if ($applicant == 0) {
+        $applicant =new ContactDetails();
+        return view('applicant.contact',compact('applicant'));
+      } else {
+        $applicant = ContactDetails::where('applicant_id', $current_user)->first();
+        return view('applicant.contact',compact('applicant'));
+      }
+
     }
 
     /**

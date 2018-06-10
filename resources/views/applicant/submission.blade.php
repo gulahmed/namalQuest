@@ -30,7 +30,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Thank you {{Auth::user()->name}} for your interest in Namal College,
+                    Thank you <b>{{Auth::user()->name}}</b> for your interest in Namal College,
                     Before you submit  please make sure you completed all the necessary information.
                 </div>
 

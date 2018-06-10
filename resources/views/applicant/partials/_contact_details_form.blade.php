@@ -8,12 +8,12 @@
 <div class="form-row">
   <div class="form-group col-md-6">
     <label for="applicant_mobile">Applicant's Mobile Number</label>
-    <input type="text" class="form-control" name="applicant_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('applicant_mobile')}}"/>
+    <input type="text" class="form-control" name="applicant_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('applicant_mobile',$applicant->applicant_mobile)}}"/>
   </div>
 
   <div class="form-group col-md-6">
     <label for="parent_mobile">Parent / Guardian's Mobile Number</label>
-    <input type="text" class="form-control" name="parent_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('parent_mobile')}}"/>
+    <input type="text" class="form-control" name="parent_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('parent_mobile',$applicant->parent_mobile)}}"/>
   </div>
 
 </div>
@@ -22,12 +22,12 @@
 <div class="form-row">
  <div class="form-group col-md-6">
  <label for="permenant_address">Permanent Address</label>
-  <textarea class="form-control" rows="2" name="permenant_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" >{{old('permenant_address')}}</textarea>
+  <textarea class="form-control" rows="2" name="permenant_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" >{{old('permenant_address',$applicant->permenant_address)}}</textarea>
  </div>
 
  <div class="form-group col-md-6">
  <label for="postal_address">Postal Address</label>
-  <textarea class="form-control" rows="2" name="postal_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" >{{old('postal_address')}}</textarea>
+  <textarea class="form-control" rows="2" name="postal_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" >{{old('postal_address',$applicant->postal_address)}}</textarea>
  </div>
 </div>
 
@@ -38,7 +38,7 @@
 <div class="form-group col-md-4">
 <label for="country">Country</label>
 
-<select class="form-control select2" id="country" name="country" value="{{old('country')}}">
+<select class="form-control select2" id="country" name="country" value="{{old('country',$applicant->country)}}">
        <option value="Pakistan" selected>Pakistan</option>
    </select>
 
@@ -48,7 +48,7 @@
 
  <div class="form-group col-md-4">
   <label for="domicile_province">Domicile Province</label>
- <select class="form-control select2" id="domicile_province" name="domicile_province" value="{{old('domicile_province')}}">
+ <select class="form-control select2" id="domicile_province" name="domicile_province" value="{{old('domicile_province',$applicant->domicile_province)}}">
       <option disabled selected hidden>Choose...</option>
       <option>AJK</option>
       <option>Baluchistan</option>
@@ -65,7 +65,7 @@
 
  <div class="form-group col-md-4">
   <label for="address_district">District </label>
-   <select class="form-control select2" name="district" value="{{old('district')}}">
+   <select class="form-control select2" name="district" value="{{old('district',$applicant->district)}}">
 	  <option disabled selected hidden>Choose...</option>
           <option>Abbottabad</option>
 	  <option>Attock</option>

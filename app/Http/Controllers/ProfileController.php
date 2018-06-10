@@ -27,7 +27,15 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        return view('applicant.profile');
+      $current_user = Auth::user()->id;
+      $profile_created = Profile::where('applicant_id', $current_user)->count();
+        if ($profile_created == 0) {
+          $profile =new Profile();
+          return view('applicant.profile',compact('profile'));
+        } else {
+          $profile = Profile::where('applicant_id', $current_user)->first();
+          return view('applicant.profile',compact('profile'));
+        }
 
     }
 
@@ -48,8 +56,10 @@ class ProfileController extends Controller
             'parent_nic'=>'required|size:13'
         ]);
 
-        $profile = new Profile();
-        $profile->applicant_id = Auth::user()->id;
+
+        $profile =  Profile::firstOrNew([
+                              'applicant_id' => Auth::user()->id]);
+      //  $profile->applicant_id = Auth::user()->id;
         $profile->father_name = $request->get('father_name');
         $profile->gender = $request->get('gender');
         $dob = $request->get('date_of_birth');
