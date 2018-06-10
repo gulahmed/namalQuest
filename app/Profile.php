@@ -14,8 +14,13 @@ class Profile extends Model
 
     public function getbirthDate()
     {
-    $dob= Carbon::createFromFormat('Y-m-d', $this->date_of_birth);
-    return Carbon::parse($dob)->format('d/m/Y');
+    if (!empty($this->date_of_birth)){
+      $dob= Carbon::createFromFormat('Y-m-d', $this->date_of_birth);
+      return Carbon::parse($dob)->format('d/m/Y');
+    }
+    else {
+      return "";
+    }
     }
 
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ApplicationSubmitted;
+use Auth;
 
 class ApplicantController extends Controller
 {
@@ -12,12 +14,9 @@ class ApplicantController extends Controller
 
     public function apply_admission(Request $request){
 
+      $user= Auth::user();
 
-      //$application = new App\Application([
-      //'user_id' => Auth::user()->id,
-      //'vacancy_id' => $vacancy_id,
-      //]);
-      //$application->save();
+      \Mail::to($user)->send(new ApplicationSubmitted($user));
 
       $success = 'Application Submitted';
       return redirect()->back()->with('success', $success);
