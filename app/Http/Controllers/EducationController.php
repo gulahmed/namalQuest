@@ -6,6 +6,7 @@ use App\Education;
 use Illuminate\Http\Request;
 use Session;
 use App\Profile;
+use App\SectionStatus;
 use Carbon\Carbon;
 use Auth;
 
@@ -28,7 +29,7 @@ class EducationController extends Controller
      */
     public function create()
     {
-      $education = Education::where('applicant_id', Auth::user()->id)->get();      
+      $education = Education::where('applicant_id', Auth::user()->id)->get();
       return view('applicant.education',['count'=>$education->count(), 'education'=>$education]);
     }
 
@@ -67,6 +68,14 @@ class EducationController extends Controller
 
 		$education->save();
     $count = Education::where('applicant_id', Auth::user()->id)->count();
+
+    $formsection= SectionStatus::updateOrCreate([
+      'applicant_id' => Auth::user()->id],[
+      'academic_details_status'=>'completed']
+    );
+
+
+
 		$success = 'Education Added – '.$education->institute;
 		return redirect()->back()->with('success', $success)->with('count',$count);
 

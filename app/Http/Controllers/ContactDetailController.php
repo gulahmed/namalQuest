@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 use Carbon\Carbon;
 use Auth;
-
+use App\SectionStatus;
 
 class ContactDetailController extends Controller
 {
@@ -69,6 +69,12 @@ class ContactDetailController extends Controller
      $contacts->domicile_province= $request->get('domicile_province');
      $contacts->country= $request->get('country');
      $contacts->save();
+
+     $formsection= SectionStatus::updateOrCreate([
+       'applicant_id' => Auth::user()->id],[
+       'contacts_details_status'=>'completed']
+     );
+
       $success = "Contact Details Saved Succefully";
       return redirect('/apply/education')->with('success',$success);
 

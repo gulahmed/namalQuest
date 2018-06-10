@@ -7,6 +7,7 @@ use App\Profile;
 use Carbon\Carbon;
 use Auth;
 use Illuminate\Http\Request;
+use App\SectionStatus;
 
 class ProfileController extends Controller
 {
@@ -67,6 +68,11 @@ class ProfileController extends Controller
         $profile->applicant_nic = $request->get('applicant_nic');
         $profile->parent_nic = $request->get('parent_nic');
         $profile->save();
+
+        $formsection= SectionStatus::updateOrCreate([
+          'applicant_id' => Auth::user()->id],[
+          'profile_details_status'=>'completed']
+        );
 
         $success = 'Personal Details Updated';
         return redirect('apply/details')->with('success', $success);

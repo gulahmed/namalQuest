@@ -6,6 +6,7 @@ use App\Program;
 use Illuminate\Http\Request;
 use Auth;
 use App\TestDetails;
+use App\SectionStatus;
 use Session;
 use Carbon\Carbon;
 use App\ContactDetails;
@@ -89,6 +90,12 @@ class ProgramController extends Controller
       $test_details->test_obtained_marks = $request->get('test_obtained_marks');
 
       $test_details->save();
+
+      $formsection= SectionStatus::updateOrCreate([
+        'applicant_id' => Auth::user()->id],[
+        'program_details_status'=>'completed']
+      );
+
       $success = 'Program preference added';
       return redirect('apply/submit')->with('success', $success);
 

@@ -31,6 +31,13 @@
                 <div class="title m-b-md">
                     Thank you <b>{{Auth::user()->name}}</b> for your interest in Namal College.
                     Before you submit  please make sure you have completed all the necessary information.
+										@if(!empty ($user_sections))
+										<ul>
+
+											<li>{{print_r($user_sections)}}</li>
+										</ul>
+										@
+										@endif
 
 
 

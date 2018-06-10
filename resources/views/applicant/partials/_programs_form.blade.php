@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="form-group">
-                          <select class="form-control select2" name="test_name_punjab" @if ($domicile->domicile_province != 'Punjab') disabled @endif style="width: 100%" id="dompunjab">
+                          <select class="form-control select2" name="test_name_punjab" @if (!empty($domicile->domicile_province) && $domicile->domicile_province != 'Punjab') disabled @endif style="width: 100%" id="dompunjab">
                             <option disabled selected hidden>Choose ...</option>
                             <option value="NAT-I">NAT-I 2018(NTS) (For BBA Only) (100 Marks)</option>
                             <option value="UET Lahore">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
@@ -87,7 +87,7 @@
                         </div>
 
                         <div class="form-group">
-                          <select class="form-control select2" name="test_name_non_punjab" style="width: 100%" id="domnonpunjab" @if ($domicile->domicile_province == 'Punjab') disabled @endif  onchange="nonpunjabtester()">
+                          <select class="form-control select2" name="test_name_non_punjab" style="width: 100%" id="domnonpunjab" @if (!empty($domicile->domicile_province)&& $domicile->domicile_province == 'Punjab') disabled @endif  onchange="nonpunjabtester()">
                             <option disabled selected hidden>Choose ...</option>
                             <option value="NAT-I">NAT-I 2018 (NTS) (100 Marks)</option>
                             <option value="UET Lahore">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
@@ -128,7 +128,7 @@
 		      <label for="testrollnum">Test obtained Markes</label>
 		      <div class="form-group">
 			<div class="input-group">
-			  <input type="text" class="form-control" name="test_obtained_marks" id="testrollnum" placeholder="Enter roll number ...">
+			  <input type="text" class="form-control" name="test_obtained_marks" id="testrollnum" placeholder="Test Obtained Marks ...">
 			</div>
 		      </div>
 		    </div>
