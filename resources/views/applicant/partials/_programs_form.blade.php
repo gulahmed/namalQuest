@@ -67,8 +67,9 @@
                           &#9638 &nbsp;For BBA, either NAT-I 2018 (conducted by NTS) <strong>OR</strong> Combined Entry Test 2018 (conducted by UET Lahore) is accepted.<br>
                           </div>
                         </div>
+
                         <div class="form-group">
-                          <select class="form-control select2" name="test_name_punjab" @if ($domicile != 'punjab') disabled @endif style="width: 100%" id="dompunjab">
+                          <select class="form-control select2" name="test_name_punjab" @if ($domicile->domicile_province != 'Punjab') disabled @endif style="width: 100%" id="dompunjab">
                             <option disabled selected hidden>Choose ...</option>
                             <option value="NAT-I">NAT-I 2018(NTS) (For BBA Only) (100 Marks)</option>
                             <option value="UET Lahore">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
@@ -86,7 +87,7 @@
                         </div>
 
                         <div class="form-group">
-                          <select class="form-control select2" name="test_name_non_punjab" style="width: 100%" id="domnonpunjab" @if ($domicile == 'punjab') disabled @endif  onchange="nonpunjabtester()">
+                          <select class="form-control select2" name="test_name_non_punjab" style="width: 100%" id="domnonpunjab" @if ($domicile->domicile_province == 'Punjab') disabled @endif  onchange="nonpunjabtester()">
                             <option disabled selected hidden>Choose ...</option>
                             <option value="NAT-I">NAT-I 2018 (NTS) (100 Marks)</option>
                             <option value="UET Lahore">UET Lahore Combined Entry Test 2018 (400 Marks)</option>
