@@ -33,7 +33,7 @@
 
 	 <div class="form-group col-md-6">
 	  <label for="gender">Gender</label>
-	 <select class="form-control select2" id="gender" name="gender" >
+	 <select class="form-control select2" id="gender" style="width: 100%" name="gender" >
 	      <option disabled selected hidden>Choose ...</option>
 				 <option value="Male" {{ old('gender') == "Male" ? 'selected' : '' }}>Male</option>
 	       <option value ="Female" {{old('gender') =="Female" ?'selected': ''}}>Female</option>

@@ -38,7 +38,7 @@
 <div class="form-group col-md-4">
 <label for="country">Country</label>
 
-<select class="form-control select2" id="country" name="country" value="{{old('country')}}">
+<select class="form-control select2" id="country" name="country" style="width: 100%" value="{{old('country')}}">
        <option value="Pakistan" selected>Pakistan</option>
    </select>
 
@@ -48,7 +48,7 @@
 
  <div class="form-group col-md-4">
   <label for="domicile_province">Domicile Province</label>
- <select class="form-control select2" id="domicile_province" name="domicile_province" value="{{old('domicile_province')}}">
+ <select class="form-control select2" id="domicile_province" style="width: 100%" name="domicile_province" value="{{old('domicile_province')}}">
       <option disabled selected hidden>Choose...</option>
       <option>AJK</option>
       <option>Baluchistan</option>
@@ -65,7 +65,7 @@
 
  <div class="form-group col-md-4">
   <label for="address_district">District </label>
-   <select class="form-control select2" name="district" value="{{old('district')}}">
+   <select class="form-control select2" name="district" style="width: 100%" value="{{old('district')}}">
 	  <option disabled selected hidden>Choose...</option>
           <option>Abbottabad</option>
 	  <option>Attock</option>

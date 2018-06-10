@@ -3,8 +3,9 @@
   <form method="post" action="{{url('apply/education')}}" class="form">
     {{csrf_field()}}
     <div class="form-group"><input type="text" class="form-control" name="institute" maxlength="30" placeholder="Institute Name" value="{{ old('institute') }}"/></div>
-    <div class="form-group">
-      <select class="form-control select2" name="qualification" >
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <select class="form-control select2" name="qualification" style="width: 100%">
 			<option value="" disbaled selected hidden>Title of Qualification</option>
                         <option value="Matric">Matriculation</option>
 			<option value="DAE Holder">'O'-Level</option>
@@ -15,21 +16,12 @@
                         <option value="DAE Holder">DAE Holder</option>
                         <option value="FA">FA</option>
     </select>
-
     </div>
 
-    <div class="form-row">
-    <div class="form-group col-md-6">
-             <select class="form-control" name="result_awaiting" id="result_status">
-		  <option value="" disbaled selected hidden>Qualification Status</option>
-                  <option value="0">Result Waiting</option>
-                  <option value="1">Completed</option>
-              </select>
-    </div>
 
-    <div class="form-group col-md-6">
-      <select class="form-control select2" name="board">
-			<option value="" disbaled selected hidden>Board/University</option>
+        <div class="form-group col-md-6">
+      		<select class="form-control select2" name="board" style="width: 100%">
+				<option value="" disbaled selected hidden>Board/University</option>
                         <option>BISE, Abbottabad</option>
                         <option>BISE, Bahawalpur</option>
                         <option>BISE, Bannu</option>
@@ -68,7 +60,22 @@
                         <option>Other</option>
                       </select>
 
+    		</div>
+    	</div>
+
+    <div class="form-row">
+    <div class="form-group col-md-6">
+             <select class="form-control" name="result_awaiting" id="result_status" style="width: 100%">
+		  		  <option value="" disbaled selected hidden>Qualification Status</option>
+                  <option value="0">Result Waiting</option>
+                  <option value="1">Completed</option>
+              </select>
     </div>
+
+	<div class="form-group col-md-6 ">
+      <input type="text" class="form-control" name="roll_number_await" placeholder="Roll Number (Result Awaiting Year)" value="{{ old('roll_number_await') }}">
+    </div>
+
   </div>
 
   <div class="form-row">
