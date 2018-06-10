@@ -25,21 +25,36 @@
 			<div class="card content-card">
 				<div class="card-body">
 					<h3>Submission</h3>
-					<form method="post" action="{{url('/apply/programs')}}">
-						{{csrf_field()}}
+
 
             <div class="content">
                 <div class="title m-b-md">
-                    Thank you <b>{{Auth::user()->name}}</b> for your interest in Namal College,
-                    Before you submit  please make sure you completed all the necessary information.
+                    Thank you <b>{{Auth::user()->name}}</b> for your interest in Namal College.
+                    Before you submit  please make sure you have completed all the necessary information.
+
+
+
                 </div>
 
             </div>
 
 
 						<span class="i-need-space"></span>
-						<button type="submit" class="btn btn-primary">Save and Next</button>
+						<div class="form-group">
+							<div class="form-control col-md-6">
+						<form method="get" action="{{url('/apply/')}}">
+							{{csrf_field()}}
+						<button type="submit" class="btn btn-primary">Go Back </button>
 					</form>
+				</div>
+				<div class="form-control col-md-6">
+					<form method="post" action="{{url('/apply/submit')}}">
+						{{csrf_field()}}
+					<button type="submit" class="btn btn-primary">Apply for Admission</button>
+				</form>
+			</div>
+			</div>
+
 				</div>
 			</div>
 		</div>
