@@ -52,7 +52,7 @@ class ProfileController extends Controller
         $validate = $request->validate([
             'father_name' => 'required',
             'gender' => 'required',
-            'date_of_birth' => 'required|date',
+            'date_of_birth' => 'required|date_format:"d/m/Y"',
             'applicant_nic' =>'required|size:13',
             'parent_nic'=>'required|size:13'
         ]);
