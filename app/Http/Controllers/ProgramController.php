@@ -49,9 +49,9 @@ class ProgramController extends Controller
     public function store(Request $request)
     {
       $validate = $request->validate([
-          'test_roll_number' => 'required|Numeric',
+          //'test_roll_number' => 'required|Numeric',
           //'test_total_marks' => 'required',
-          'test_obtained_marks' => 'required|Numeric',
+          //'test_obtained_marks' => 'required|Numeric',
 
       ]);
 
