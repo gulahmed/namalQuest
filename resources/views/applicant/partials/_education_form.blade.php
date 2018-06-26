@@ -8,11 +8,11 @@
       <select class="form-control select2" name="qualification" style="width: 100%">
 			<option value="" disbaled selected hidden>Title of Qualification</option>
                         <option value="Matric">Matriculation</option>
-			<option value="DAE Holder">'O'-Level</option>
+			<option value="O-Level">'O'-Level</option>
                         <option value="FSc: Pre-Engineering">FSc: Pre-Engineering</option>
                         <option value="FSc: Pre-Medical">FSc: Pre-Medical</option>
                         <option value="FSc: ICS with Math and Physics">FSc: ICS with Math and Physics</option>
-			<option value="DAE Holder">'A'-Level</option>
+			<option value="A-Level">'A'-Level</option>
                         <option value="DAE Holder">DAE Holder</option>
                         <option value="FA">FA</option>
     </select>
