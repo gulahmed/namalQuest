@@ -173,7 +173,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-book-open"></i></span>
                           </div>
-                          <textarea class="form-control" rows="1" id="interSubj" placeholder="e.g. Math, Physics, Chemistry etc. DAE holders should only provide their major technology e.g. Mechanical Technology."></textarea>
+                          <textarea class="form-control" rows="1" id="interSubj" placeholder="e.g. Math, Physics, Chemistry etc. DAE holders should only provide their major technology e.g. Mechanical Technology." name="subjects_studied">{{old('subjects_studied')}}</textarea>
                         </div>                                        
                       </div>
                     </div>
