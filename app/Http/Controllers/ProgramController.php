@@ -68,8 +68,11 @@ class ProgramController extends Controller
         {
           Program::updateOrCreate([
             'applicant_id' => $data[$i]['applicant_id'],
-            'program_name' => $data[$i]['program_name'],
+
             'preference_order' => $data[$i]['preference_order']
+
+          ],[
+            'program_name' => $data[$i]['program_name']
           ]);
 
         }
@@ -95,12 +98,19 @@ class ProgramController extends Controller
 
 
       $punjab_test = $request->get('test_name_non_punjab');
-      $test_details = new TestDetails();
-      $test_details->applicant_id = Auth::user()->id;
-      $test_details->test_name = !empty($test_name)?$test_name:"Not Provided" ;
-      $test_details->test_roll_number = $request->get('test_roll_number');
-      $test_details->test_total_marks = !empty($total_marks)?$total_marks: 0;
-      $test_details->test_obtained_marks = $request->get('test_obtained_marks');
+      $test_details = TestDetails::updateOrCreate([
+        'applicant_id' => Auth::user()->id,
+      ],[
+        'test_name' => !empty($test_name)?$test_name:"Not Provided",
+        'test_roll_number' => $request->get('test_roll_number'),
+        'test_total_marks' => !empty($total_marks)?$total_marks: 0,
+        'test_obtained_marks' => $request->get('test_obtained_marks')
+      ]);
+      
+      // $test_details->test_name = !empty($test_name)?$test_name:"Not Provided" ;
+      // $test_details->test_roll_number = $request->get('test_roll_number');
+      // $test_details->test_total_marks = !empty($total_marks)?$total_marks: 0;
+      // $test_details->test_obtained_marks = $request->get('test_obtained_marks');
 
       $test_details->save();
 

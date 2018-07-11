@@ -20,7 +20,7 @@
                       <div class="col-sm-4">
                         <label for="firstpref">First Preference</label>
                         <div class="form-group">
-                          <select id="firstpref" class="form-control select2" name="program_pref[]" style="width: 100%;">
+                          <select id="firstpref" class="form-control select2" name="program_pref[]" style="width: 100%;" required>
                             <option disabled selected hidden>Choose ...</option>
                             <option>BBA</option>
                             <option>BSc Computer Science</option>
@@ -31,7 +31,7 @@
                       <div class="col-sm-4">
                         <label for="secondpref">Second Preference</label>
                         <div class="form-group">
-                          <select id="secondpref" class="form-control select2" name="program_pref[]" style="width: 100%; ">
+                          <select id="secondpref" class="form-control select2" name="program_pref[]" style="width: 100%; " required>
                             <option disabled selected hidden>Choose ...</option>
                             <option>BBA</option>
                             <option>BSc Computer Science</option>
