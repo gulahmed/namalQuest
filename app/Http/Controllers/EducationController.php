@@ -43,7 +43,7 @@ class EducationController extends Controller
     {
 
         $validate = $request->validate([
-          'institute' => 'required',
+          //'institute' => 'required',
           'qualification' => 'required',
           'result_awaiting' => 'required',
           'year_of_passing' => 'required',
@@ -54,20 +54,20 @@ class EducationController extends Controller
 
 
         ]);
-      $education = new Education([
-			'applicant_id' => Auth::user()->id,
-			'institute' => ucwords(strtolower($request->get('institute'))),
-			'qualification' => ucwords(strtolower($request->get('qualification'))),
-      'result_awaiting' => $request->get('result_awaiting'),
-			'year_of_passing' => $request->get('year_of_passing'),
-      'roll_number'     => $request->get('roll_number'),
-      'board'           => $request->get('board'),
-      'total_marks'     => $request->get('total_marks'),
-      'obtained_marks'     => $request->get('obtained_marks'),
-		]);
+      $education = Education::firstOrNew([
+			'applicant_id' => Auth::user()->id
+    ]);
+    $education->institute = " ";
+		$education->qualification = ucwords(strtolower($request->get('qualification')));
+    $education->result_awaiting = $request->get('result_awaiting');
+		$education->year_of_passing = $request->get('year_of_passing');
+    $education->roll_number     = $request->get('roll_number');
+    $education->board           = $request->get('board');
+    $education->total_marks     = $request->get('total_marks');
+    $education->obtained_marks     = $request->get('obtained_marks');
 
 		$education->save();
-    $count = Education::where('applicant_id', Auth::user()->id)->count();
+    //$count = Education::where('applicant_id', Auth::user()->id)->count();
 
     $formsection= SectionStatus::updateOrCreate([
       'applicant_id' => Auth::user()->id],[
@@ -76,8 +76,9 @@ class EducationController extends Controller
 
 
 
-		$success = 'Education Added – '.$education->institute;
-		return redirect()->back()->with('success', $success)->with('count',$count);
+    $success = 'Educational Details Added Succesfully – '.$education->qualification;
+    return redirect('apply/programs')->with('success', $success);
+    //return redirect()->back()->with('success', $success)->with('count',$count);
 
     }
 
