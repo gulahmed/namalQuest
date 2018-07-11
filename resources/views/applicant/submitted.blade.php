@@ -29,8 +29,7 @@
 		            <div class="content">
 		                <h5 align="center">
 		                    Thank you <b>{{Auth::user()->name}}</b> for applying in Namal College. You will recieve an email shortly
-												providing you instructions for the next steps to follow. If you do not recieve the email or have any questions, please don't
-												hesitate to email us at <b>admission@namal.edu.pk</b>
+												providing you instructions for the next steps to follow. If you do not recieve the email or have any questions, please feel free to email us at <b>admissions@namal.edu.pk</b>
 		                </h5>
 
 						<span class="i-need-space"></span>

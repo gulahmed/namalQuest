@@ -47,7 +47,7 @@
 								<form method="post" action="{{url('/apply/submit')}}">
 									{{csrf_field()}}
 									@if(App\Profile::application_submission_status()!=1)
-									<button type="submit" class="btn btn-primary align-center "  >Submit Application</button>
+									<button type="submit" class="btn btn-primary align-center">Submit Application</button>
 									@else
 									<button type="submit" class="btn btn-primary align-center" disabled >Submit Application</button>
 									@endif

@@ -61,7 +61,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <label for="punjabtest">Test Name (Punjab Domiciled)</label>
-                        <div class="card bg-secondary text-white">
+                        <div class="card bg-dark text-white">
                           <div class="card-body">
                           &#9638 &nbsp;For BSc Electrical Engineering \ BSc Computer Science, only combined Entry Test 2018 coducted by UET Lahore is accepted.<br>
                           &#9638 &nbsp;For BBA, either NAT-I 2018 (conducted by NTS) <strong>OR</strong> Combined Entry Test 2018 (conducted by UET Lahore) is accepted.<br>
@@ -78,7 +78,7 @@
                       </div>
                       <div class="col-md-6">
                         <label for="nonpunjabtest">Test Name (Non-Punjab Domiciled)</label>
-                        <div class="card bg-secondary text-white">
+                        <div class="card bg-dark text-white">
                           <div class="card-body">
                           For BSc Electrical Engineering \ BSc Computer Science \ BBA, following tests are accepted:<br>
                           &#9638 &nbsp;NAT-I 2018 (conducted by NTS)<br> &emsp;<strong>OR</strong><br>

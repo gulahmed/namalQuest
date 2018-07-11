@@ -124,7 +124,7 @@
           margin-left: 5px; }
 
       a {
-        color: #3498db;
+        color: #00695c;
         text-decoration: underline; }
 
       /* -------------------------------------
@@ -143,7 +143,7 @@
           text-align: center; }
         .btn a {
           background-color: #ffffff;
-          border: solid 1px #3498db;
+          border: solid 1px #00695c;
           border-radius: 5px;
           box-sizing: border-box;
           color: #3498db;
@@ -157,11 +157,11 @@
           text-transform: capitalize; }
 
       .btn-primary table td {
-        background-color: #3498db; }
+        background-color: #00695c; }
 
       .btn-primary a {
-        background-color: #3498db;
-        border-color: #3498db;
+        background-color: #00695c;
+        border-color: #00695c;
         color: #ffffff; }
 
       /* -------------------------------------
@@ -301,7 +301,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="https://www.namal.edu.pk/wp-content/uploads/2018/06/Admission_Deposit_Slip_2018.pdf" target="_blank">Download Challan form from Here</a> </td>
+                                      <td> <a href="https://www.namal.edu.pk/wp-content/uploads/2018/06/Admission_Deposit_Slip_2018.pdf" target="_blank">Download Challan form from here</a> </td>
                                     </tr>
 
                                   </tbody>
@@ -310,15 +310,15 @@
                             </tr>
                           </tbody>
                         </table>
-                          <p> Please upload the scanned copy of your bank stamped challan form on the following link  </p>
+                          <p> Please upload the scanned copy of your bank stamped challan form on the following link:  </p>
                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
                               <td align="left">
                                 <table border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
+                                  <tbody></tbody>
                                     <tr>
-                                      <td> <a href="https://www.namal.edu.pk/challan-form-upload/" target="_blank">Upload Challan Scanned Copy</a> </td>
+                                      <td> <a href="https://goo.gl/forms/VhHUHNWnqKgqVlBt1" target="_blank">Upload Challan Scanned Copy</a> </td>
                                     </tr>
 
                                   </tbody>
@@ -343,7 +343,7 @@
               <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span class="apple-link"> Namal College 30 Km Talagang Road, Mianwali, Pakistan                      Contact Us: +92 459 236 995 EXT. 130, 107
+                    <span class="apple-link"> Namal College 30 Km Talagang Road, Mianwali, Pakistan <br>                      Contact Us: +92 459 236 995 EXT. 130, 107
 </span>
                   </td>
                 </tr>

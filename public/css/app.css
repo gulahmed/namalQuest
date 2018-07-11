@@ -616,7 +616,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 
@@ -2440,6 +2440,7 @@ select.form-control-lg:not([size]):not([multiple]),
 
 .form-check-label {
   margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .form-check-inline {
@@ -4605,9 +4606,10 @@ input[type="button"].btn-block {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-right: 1rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: inherit;
   white-space: nowrap;
+  font-family: "Roboto Condensed",sans-serif;
 }
 
 .navbar-brand:hover,
@@ -4950,7 +4952,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
 }
 
 .navbar-light .navbar-brand:hover,
@@ -4959,13 +4961,13 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.63);
+  color: rgb(180, 222, 212);
   font-size: 1rem;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0, 0, 0, 0.76);
+  color: rgb(255, 255, 255);
   font-size:1.1rem;
 }
 
@@ -8781,7 +8783,8 @@ button.bg-dark:focus {
 
 .pt-4,
 .py-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 5.7rem !important;
+  background-image: url("https://www.namal.edu.pk/wp-content/uploads/2018/06/brick-bg.png");
 }
 
 .pr-4,
@@ -8791,7 +8794,7 @@ button.bg-dark:focus {
 
 .pb-4,
 .py-4 {
-  padding-bottom: 1.5rem !important;
+  padding-bottom: 6.5rem !important;
 }
 
 .pl-4,
@@ -10425,7 +10428,7 @@ a.text-dark:focus {
 }
 
 .navbar-laravel {
-  background-color: #fff;
+  background-color: #00695c;
 }
 
 .pull-right {
@@ -10487,13 +10490,24 @@ h6 {
   text-align: center;
 }
 
-.side-nav .active,
-.side-nav .active:hover {
-  background-color: #eee;
+.side-nav .active{
+  background-color: #ffffff;
   color: #00695c;
   border-left: 6px solid #00695c;
   border-radius: 0 5px 5px 0;
-  line-height: 3;F
+  line-height: 3;
+  -webkit-box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.side-nav .active:hover {
+  background-color: #343A40;
+  color: #ffffff;
+  border-left: 6px solid #00695c;
+  border-radius: 0 5px 5px 0;
+  line-height: 3;
+  -webkit-box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 .alert-danger ul {
