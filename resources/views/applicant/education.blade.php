@@ -26,39 +26,17 @@
         <div class="card-body">
           <h3>Education </h3>
           <div class="table-responsive">
-           @if($count > 0)
-            <table class="table table-sm">
-              <thead><tr>
-                  <th>Qualification</th>
-                  <th>Board</th>
-                  <th>Passing Year</th>
-                  <th>Obtained Marks</th>
-                  <th class="fit">Action</th>
-                </tr></thead>
-                <tbody>
-                  @foreach($education as $edu)
-                  <tr><td>{{$edu->qualification}}</td>
-                    <td>{{ $edu->board }}</td>
-                    <td>{{ $edu->year_of_passing }}</td>
-                    <td>{{ $edu->obtained_marks }}</td>
-
-                    <td class="fit">
-                      <form action="{{route('delete.education', $edu->id)}}" method="post">                        {{csrf_field()}}
-                        <input type="hidden" name="_method" value="DELETE" >
-                        <input type="submit" class="btn btn-danger btn-sm" value="Remove" >
-                      </form>
-                    </td></tr>
-                     @endforeach
-
-                </tbody>
-            </table><br/>
-            @endif
+          
           </div>
+          <form method="post" action="{{url('apply/education')}}" class="form">
+          {{csrf_field()}}
 
           @include('applicant.partials._education_form')
 
 					<span class="i-need-space"></span>
-					<a href="{{ url('apply/programs') }}" class="btn btn-primary">Next</a>
+				<!-- 	<a href="{{ url('apply/programs') }}" class="btn btn-primary">Next</a> -->
+        <div class="form-group"><button type="submit" class="btn btn-primary">Next</button></div>
+     </form>
         </div>
       </div>
     </div>
