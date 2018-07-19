@@ -125,7 +125,7 @@
 		    </div>
 
 		    <div class=" col-md-6">
-		      <label for="testrollnum">Test obtained Markes</label>
+		      <label for="testrollnum">Test obtained Marks</label>
 		      <div class="form-group">
 			<div class="input-group">
 			  <input type="text" class="form-control" name="test_obtained_marks" id="testrollnum" placeholder="Test Obtained Marks ...">
