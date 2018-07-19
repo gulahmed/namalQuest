@@ -1,5 +1,5 @@
 
-<a href="" id="helpLink">
+<a  id="helpLink">
 	<div class="alert alert-info alert-dismissible fade show" role="alert">
 		Help Guide
 		<form id="toggleHelp" method="post" action="{{url('toggleHelp')}}">
@@ -25,13 +25,13 @@ $(function () {
 </script>
 
 <div class="list-group side-nav">
-	<a href="" class="list-group-item list-group-item-action  active ">
+	<a  class="list-group-item list-group-item-action  active ">
 		@if(App\SectionStatus::is_profile_section()=='completed')
 		<i class="fas fa-check-circle"></i>&nbsp;
 		@else
 		<i class="far fa-circle"></i>&nbsp;  @endif
 		Personal Information</a>
-	<a href="" class="list-group-item list-group-item-action active">
+	<a  class="list-group-item list-group-item-action active">
 
 		@if(App\SectionStatus::is_contact_section()=='completed')
 		<i class="fas fa-check-circle"></i>&nbsp;
@@ -41,7 +41,7 @@ $(function () {
 		Contact Details</a>
 
 
-	<a href="" class="list-group-item list-group-item-action  active ">
+	<a  class="list-group-item list-group-item-action  active ">
 
 		@if(App\SectionStatus::is_education_section()=='completed')
 	 <i class="fas fa-check-circle"></i>&nbsp;
@@ -50,7 +50,7 @@ $(function () {
 
 		Education</a>
 
-		<a href="" class="list-group-item list-group-item-action  active ">
+		<a  class="list-group-item list-group-item-action active  " >
 
 		@if(App\SectionStatus::is_program_section()=='completed')
 		<i class="fas fa-check-circle"></i>&nbsp;
@@ -65,7 +65,7 @@ $(function () {
 </div>
 <hr/>
 <div class="list-group side-nav">
-	<!-- <a href="" class="list-group-item list-group-item-action active">
+	<!-- <a  class="list-group-item list-group-item-action active">
 		<i class="fas fa-search"></i>&nbsp;
 		Review Information</a> -->
 
