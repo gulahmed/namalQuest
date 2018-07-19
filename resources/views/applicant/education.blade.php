@@ -33,9 +33,9 @@
 
           @include('applicant.partials._education_form')
 
-					<span class="i-need-space"></span>
-				<!-- 	<a href="{{ url('apply/programs') }}" class="btn btn-primary">Next</a> -->
-        <div class="form-group"><button type="submit" class="btn btn-primary">Next</button></div>
+        <div class="form-group">
+        <a href="/apply/details" class="btn btn-primary">Previous</a>
+        <button type="submit" class="btn btn-primary" style="float:right;">Save and Next</button></div>
      </form>
         </div>
       </div>

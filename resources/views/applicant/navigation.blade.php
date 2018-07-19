@@ -25,13 +25,13 @@ $(function () {
 </script>
 
 <div class="list-group side-nav">
-	<a href="/apply/profile" class="list-group-item list-group-item-action  active ">
+	<a href="" class="list-group-item list-group-item-action  active ">
 		@if(App\SectionStatus::is_profile_section()=='completed')
 		<i class="fas fa-check-circle"></i>&nbsp;
 		@else
 		<i class="far fa-circle"></i>&nbsp;  @endif
 		Personal Information</a>
-	<a href="/apply/details" class="list-group-item list-group-item-action active">
+	<a href="" class="list-group-item list-group-item-action active">
 
 		@if(App\SectionStatus::is_contact_section()=='completed')
 		<i class="fas fa-check-circle"></i>&nbsp;
@@ -41,7 +41,7 @@ $(function () {
 		Contact Details</a>
 
 
-	<a href="/apply/education" class="list-group-item list-group-item-action  active ">
+	<a href="" class="list-group-item list-group-item-action  active ">
 
 		@if(App\SectionStatus::is_education_section()=='completed')
 	 <i class="fas fa-check-circle"></i>&nbsp;
@@ -50,7 +50,7 @@ $(function () {
 
 		Education</a>
 
-		<a href="/apply/programs" class="list-group-item list-group-item-action  active ">
+		<a href="" class="list-group-item list-group-item-action  active ">
 
 		@if(App\SectionStatus::is_program_section()=='completed')
 		<i class="fas fa-check-circle"></i>&nbsp;

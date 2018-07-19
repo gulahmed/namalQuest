@@ -8,12 +8,12 @@
 <div class="form-row">
   <div class="form-group col-md-6">
     <label for="applicant_mobile">Applicant's Mobile Number</label>
-    <input type="text" class="form-control" name="applicant_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('applicant_mobile',$applicant->applicant_mobile)}}"/>
+    <input type="text" class="form-control" name="applicant_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('applicant_mobile',$applicant->applicant_mobile)}}" required/>
   </div>
 
   <div class="form-group col-md-6">
     <label for="parent_mobile">Parent / Guardian's Mobile Number</label>
-    <input type="text" class="form-control" name="parent_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('parent_mobile',$applicant->parent_mobile)}}"/>
+    <input type="text" class="form-control" name="parent_mobile" maxlength="11" placeholder="03xxxxxxxxx" value="{{old('parent_mobile',$applicant->parent_mobile)}}" required/>
   </div>
 
 </div>
@@ -22,7 +22,7 @@
 <div class="form-row">
  <div class="form-group col-md-6">
  <label for="permenant_address">Permanent Address</label>
-  <textarea class="form-control" rows="2" name="permenant_address" placeholder="Street No. ABC, House No. XYZ, Postal Code" >{{old('permenant_address',$applicant->permenant_address)}}</textarea>
+  <textarea class="form-control" rows="2" name="permenant_address" placeholder="Street No. ABC, House No. XYZ, Postal Code"  required>{{old('permenant_address',$applicant->permenant_address)}}</textarea>
  </div>
 
  <div class="form-group col-md-6">
@@ -48,7 +48,7 @@
 
  <div class="form-group col-md-4">
   <label for="domicile_province">Domicile Province</label>
- <select class="form-control select2" id="domicile_province" name="domicile_province" style="width: 100%" value="{{old('domicile_province',$applicant->domicile_province)}}">
+ <select class="form-control select2" id="domicile_province" name="domicile_province" style="width: 100%" value="{{old('domicile_province',$applicant->domicile_province)}}" required>
       <option disabled selected hidden>Choose...</option>
       <option>AJK</option>
       <option>Baluchistan</option>
@@ -65,7 +65,7 @@
 
  <div class="form-group col-md-4">
   <label for="address_district">District </label>
-   <select class="form-control select2" name="district" style="width: 100%" value="{{old('district',$applicant->district)}}">
+   <select class="form-control select2" name="district" style="width: 100%" value="{{old('district',$applicant->district)}}" required>
 	  <option disabled selected hidden>Choose...</option>
           <option>Abbottabad</option>
 	  <option>Attock</option>

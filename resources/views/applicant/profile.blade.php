@@ -30,8 +30,7 @@
 
 						@include('applicant.partials._profile_form')
 					
-						<span class="i-need-space"></span>
-						<button type="submit" class="btn btn-primary">Save and Next</button>
+						<button type="submit" class="btn btn-primary" style="float: right;">Save and Next</button>
 					</form>
 				</div>
 			</div>

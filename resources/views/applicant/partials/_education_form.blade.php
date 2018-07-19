@@ -108,7 +108,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="roll_number" type="text" class="form-control" id="inter1rollnum" value="{{ old('roll_number') }}">
+                            <input name="roll_number" type="text" class="form-control" id="inter1rollnum" value="{{ old('roll_number') }}" required>
                           </div>
                         </div>
                       </div> 
@@ -121,7 +121,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="total_marks" type="text" class="form-control" id="inter1totalmarks" value="{{ old('total_marks') }}">
+                            <input name="total_marks" type="text" class="form-control" id="inter1totalmarks" value="{{ old('total_marks') }}" required>
                           </div>
                         </div>
                       </div>
@@ -134,7 +134,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="obtained_marks" type="text" class="form-control" id="inter1obtmarks" value="{{ old('obtained_marks') }}">
+                            <input name="obtained_marks" type="text" class="form-control" id="inter1obtmarks" value="{{ old('obtained_marks') }}" required>
                           </div>
                         </div>
                       </div>
@@ -147,7 +147,7 @@
                                   <i class="fa fa-calendar"></i>
                                 </span>
                             </div>
-                            <input name="year_of_passing" type="text" class="form-control" id="inter1passyear" value="{{ old('year_of_passing') }}">
+                            <input name="year_of_passing" type="text" class="form-control" id="inter1passyear" value="{{ old('year_of_passing') }}" required>
                           </div>
                         </div>
                       </div>
@@ -160,7 +160,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="rollnumber" type="text" class="form-control" id="inter2rollnum">
+                            <input name="rollnumber" type="text" class="form-control" id="inter2rollnum" required>
                           </div>
                         </div>
                       </div>                      

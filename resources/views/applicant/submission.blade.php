@@ -37,7 +37,7 @@
 							<h5 align="center">
 								<div class="alert alert-info">
 
-									Your application is already submitted.
+									Yuur application is already submitted.  
 								</div>
 							</h5>
 							@endif
@@ -49,8 +49,10 @@
 									@if(App\Profile::application_submission_status()!=1)
 									<button type="submit" class="btn btn-primary align-center">Submit Application</button>
 									@else
-									<button type="submit" class="btn btn-primary align-center" disabled >Submit Application</button>
+									<button type="submit" class="btn btn-primary align-center"  >Update Application</button>
 									@endif
+									<a href ="/apply/profile" class="btn btn-primary" > Go Back</a>
+
 								</form>
 							</div>
 						</div>
