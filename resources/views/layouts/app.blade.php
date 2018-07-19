@@ -13,10 +13,12 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-		<script src="{{ asset('js/datatables.min.js') }}"></script>
-		<script src="{{ asset('js/marked.min.js') }}"></script>
+    
+	<script src="{{ asset('js/datatables.min.js') }}"></script>
+	<script src="{{ asset('js/marked.min.js') }}"></script>
 
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -82,5 +84,11 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://adminlte.io/themes/dev/AdminLTE/plugins/select2/select2.full.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+        });
+    </script>
 </body>
 </html>
