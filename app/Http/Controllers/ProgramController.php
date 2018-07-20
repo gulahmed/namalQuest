@@ -36,8 +36,37 @@ class ProgramController extends Controller
                   ->select('domicile_province')
                   ->first();
 
+       $programs = Program::where('applicant_id','=', Auth::user()->id)->get();   
 
-        return view('applicant.programs',compact('domicile'));
+
+      $first_preference ="";
+      $second_preference="";
+       foreach($programs as $p)
+       for ($i=0; $i<2; $i++){
+         if ($p->preference_order == 1){
+           $first_preference = $p->program_name;
+         }elseif ($p->preference_order == 2){
+          $second_preference = $p->program_name;
+         }
+      }
+      
+
+
+      $test_roll_number ="";
+      $test_obtained_marks= "";
+      $test_details = TestDetails:: where('applicant_id','=', Auth::user()->id)->first();   
+      if($test_details!=NULL){
+      $test_name = $test_details->test_name;
+      $test_roll_number =$test_details->test_roll_number;
+      $test_obtained_marks= $test_details->test_obtained_marks;
+      }
+
+
+      
+    
+      
+    
+        return view('applicant.programs',compact('domicile','first_preference','second_preference','test_roll_number', 'test_obtained_marks', 'test_name' ));
      }
 
     /**

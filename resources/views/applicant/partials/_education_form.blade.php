@@ -11,12 +11,12 @@
                         <div class="form-group" >
                           <select id="selected-category" name="qualification"  class="form-control select2" style="width: 100%!important; " required  >
                             <option disabled selected hidden>Choose ...</option>
-                            <option value="FSc: Pre-Engineering">FSc: Pre-Engineering</option>
-                            <option value="FSc: Pre-Medical">FSc: Pre-Medical</option>
-                            <option value="FSc: ICS">FSc: ICS with Math and Physics</option>
-                            <option value="A-Level">'A'-Level</option>
-                            <option value="DAE Holder">DAE Holder</option>
-                            <option value="FA">FA</option>
+                            <option  {{old('qualification', $education[0]->qualification) =="Fsc: Pre-engineering" ? 'selected': ''}}  >FSc: Pre-Engineering</option>
+                            <option {{old('qualification', $education[0]->qualification) =="Fsc: Pre-medical" ? 'selected': ''}} >FSc: Pre-Medical</option>
+                            <option {{old('qualification', $education[0]->qualification) =="Fsc: Ics With Math And Physics" ? 'selected': ''}}  >FSc: ICS with Math and Physics  </option>
+                            <option {{old('qualification', $education[0]->qualification) =="A-level" ? 'selected': ''}}  >A-Level</option>
+                            <option {{old('qualification', $education[0]->qualification) =="Dae Holder" ? 'selected': ''}} >DAE Holder</option>
+                            <option  {{old('qualification', $education[0]->qualification) =="Fa" ? 'selected': ''}} >FA</option>
                           </select>
                         </div>
                       </div>
@@ -25,8 +25,8 @@
                         <div class="form-group" data-toggle="popover" title="Qualification Status" data-placement="top" data-trigger="hover" data-content="Choose 'In Progress', if you are waiting for last year result">
                           <select  name="result_awaiting" class="form-control select2" id="qualStatus" style="width: 100%!important;" onchange="statusSelector()" required>
                             <option disabled selected hidden>Choose ...</option>
-                            <option value="0">Completed</option>
-                            <option value="1">In progress</option>
+                            <option value="0"{{old('result_awaiting', $education[0]->result_awaiting) =="0" ?'selected':'' }}>Completed</option>
+                            <option value="1" {{old('result_awaiting', $education[0]->result_awaiting) =="1" ? 'selected': ''}}>In progress</option>
                           </select>
                         </div>
                       </div>
@@ -45,42 +45,42 @@
                         <div class="form-group" >
                           <select name="board" class="form-control select2" style="width: 100%!important;" id="interBoard" required>
                             <option disabled selected hidden>Choose ...</option>
-                            <option>BISE, Abbottabad</option>
-                            <option>BISE, Bahawalpur</option>
-                            <option>BISE, Bannu</option>
-                            <option>BISE, DG Khan</option>
-                            <option>BISE, DI Khan</option>
-                            <option>BISE, Faisalabad</option>
-                            <option>BISE, Gujranwala</option>
-                            <option>BISE, Hyderabad</option>
-                            <option>BISE, Kohat</option>
-                            <option>BISE, Lahore</option>
-                            <option>BISE, Larkana</option>
-                            <option>BISE, Malakand</option>
-                            <option>BISE, Mardan</option>
-                            <option>BISE, Mirpur Khas</option>
-                            <option>BISE, Multan</option>
-                            <option>BISE, Peshawar</option>
-                            <option>BISE, Quetta</option>
-                            <option>BISE, Rawalpindi</option>
-                            <option>BISE, Sahiwal</option>
-                            <option>BISE, Sargodha</option>
-                            <option>BISE, Swat</option>
-                            <option>BISE, Turbat</option>
-                            <option>BISE, Zhob</option>
-                            <option>BISEn, Sukkur</option>
-                            <option>BSE, Karachi</option>
-                            <option>BIE, Karachi</option>
-                            <option>FBISE, Islamabad</option>
-                            <option>AJK BISE, Mirpur</option>
-                            <option>Gilgit Baltistan BISE Karakurum</option>
-                            <option>Punjab BTE, Lahore</option>
-                            <option>Khyber Pakhtunkhwa BTE, Peshawar</option>
-                            <option>Sindh BTE, Karachi</option>
-                            <option>Baluchistan TEB, Quetta</option>
-                            <option>Cambridge IGCSE</option>
-                            <option>Pearson Edexcel GCSEs</option>
-                            <option>Other</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Abbottabad" ? 'selected': ''}} >BISE, Abbottabad</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Bahawalpur" ? 'selected': ''}} >BISE, Bahawalpur</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Bannu" ? 'selected': ''}} > BISE, Bannu</option>
+                            <option {{old('board', $education[0]->board) =="BISE, DG Khan" ? 'selected': ''}} > BISE, DG Khan</option>
+                            <option {{old('board', $education[0]->board) =="BISE, DI Khan" ? 'selected': ''}} >BISE, DI Khan</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Faisalabad" ? 'selected': ''}} >BISE, Faisalabad</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Gujranwala" ? 'selected': ''}} >BISE, Gujranwala</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Hyderabad" ? 'selected': ''}} >BISE, Hyderabad</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Kohat" ? 'selected': ''}} >BISE, Kohat</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Lahore" ? 'selected': ''}}>BISE, Lahore</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Larkana" ? 'selected': ''}}>BISE, Larkana</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Malakand" ? 'selected': ''}}>BISE, Malakand</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Mardan" ? 'selected': ''}}>BISE, Mardan</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Mirpur Khas" ? 'selected': ''}}>BISE, Mirpur Khas</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Multan" ? 'selected': ''}}>BISE, Multan</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Peshawar" ? 'selected': ''}}>BISE, Peshawar</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Quetta" ? 'selected': ''}}>BISE, Quetta</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Rawalpindi" ? 'selected': ''}}>BISE, Rawalpindi</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Sahiwal" ? 'selected': ''}} >BISE, Sahiwal</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Sargodha" ? 'selected': ''}}>BISE, Sargodha</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Swat" ? 'selected': ''}}>BISE, Swat</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Turbat" ? 'selected': ''}}>BISE, Turbat</option>
+                            <option {{old('board', $education[0]->board) =="BISE, Zhob" ? 'selected': ''}}>BISE, Zhob</option>
+                            <option {{old('board', $education[0]->board) =="BISEn, Sukkur" ? 'selected': ''}}>BISEn, Sukkur</option>
+                            <option {{old('board', $education[0]->board) =="BSE, Karachi" ? 'selected': ''}}>BSE, Karachi</option>
+                            <option {{old('board', $education[0]->board) =="BIE, Karachi" ? 'selected': ''}}>BIE, Karachi</option>
+                            <option {{old('board', $education[0]->board) =="FBISE, Islamabad" ? 'selected': ''}}>FBISE, Islamabad</option>
+                            <option {{old('board', $education[0]->board) =="AJK BISE, Mirpur" ? 'selected': ''}}>AJK BISE, Mirpur</option>
+                            <option {{old('board', $education[0]->board) =="Gilgit Baltistan BISE Karakurum" ? 'selected': ''}}>Gilgit Baltistan BISE Karakurum</option>
+                            <option {{old('board', $education[0]->board) =="Punjab BTE, Lahore" ? 'selected': ''}}>Punjab BTE, Lahore</option>
+                            <option {{old('board', $education[0]->board) =="Khyber Pakhtunkhwa BTE, Peshawar" ? 'selected': ''}}>Khyber Pakhtunkhwa BTE, Peshawar</option>
+                            <option {{old('board', $education[0]->board) =="Sindh BTE, Karachi" ? 'selected': ''}}>Sindh BTE, Karachi</option>
+                            <option {{old('board', $education[0]->board) =="Baluchistan TEB, Quetta" ? 'selected': ''}}>Baluchistan TEB, Quetta</option>
+                            <option {{old('board', $education[0]->board) =="Cambridge IGCSE" ? 'selected': ''}}>Cambridge IGCSE</option>
+                            <option {{old('board', $education[0]->board) =="Pearson Edexcel GCSEs" ? 'selected': ''}}>Pearson Edexcel GCSEs</option>
+                            <option {{old('board', $education[0]->board) =="Other" ? 'selected': ''}}>Other</option>
                           </select>
                         </div>
                       </div>                      
@@ -108,7 +108,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="roll_number" type="text" class="form-control" id="inter1rollnum" value="{{ old('roll_number') }}" required>
+                            <input name="roll_number" type="text" class="form-control" id="inter1rollnum" value="{{ old('roll_number', $education[0]->roll_number) }}" required>
                           </div>
                         </div>
                       </div> 
@@ -120,8 +120,8 @@
                                 <span class="input-group-text">
                                   <i class="fas fa-hashtag"></i>
                                 </span>
-                            </div>
-                            <input name="total_marks" type="text" class="form-control" id="inter1totalmarks" value="{{ old('total_marks') }}" required>
+                            </div>,
+                            <input name="total_marks" type="text" class="form-control" id="inter1totalmarks" value="{{ old('total_marks',$education[0]->total_marks) }}" required>
                           </div>
                         </div>
                       </div>
@@ -134,7 +134,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="obtained_marks" type="text" class="form-control" id="inter1obtmarks" value="{{ old('obtained_marks') }}" required>
+                            <input name="obtained_marks" type="text" class="form-control" id="inter1obtmarks" value="{{ old('obtained_marks',$education[0]->obtained_marks) }}" required>
                           </div>
                         </div>
                       </div>
@@ -147,7 +147,7 @@
                                   <i class="fa fa-calendar"></i>
                                 </span>
                             </div>
-                            <input name="year_of_passing" type="text" class="form-control" id="inter1passyear" value="{{ old('year_of_passing') }}" required>
+                            <input name="year_of_passing" type="text" class="form-control" id="inter1passyear" value="{{ old('year_of_passing',$education[0]->year_of_passing) }}" required>
                           </div>
                         </div>
                       </div>
@@ -160,7 +160,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="rollnumber" type="text" class="form-control" id="inter2rollnum" required>
+                            <input name="rollnumber" type="text" class="form-control" id="inter2rollnum" value="{{ old('rollnumber',$education[0]->rollnumber) }}" required>
                           </div>
                         </div>
                       </div>                      
@@ -173,7 +173,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-book-open"></i></span>
                           </div>
-                          <textarea class="form-control" rows="1" id="interSubj" placeholder="e.g. Math, Physics, Chemistry etc. DAE holders should only provide their major technology e.g. Mechanical Technology." name="subjects_studied">{{old('subjects_studied')}}</textarea>
+                          <textarea class="form-control" rows="1" id="interSubj" placeholder="e.g. Math, Physics, Chemistry etc. DAE holders should only provide their major technology e.g. Mechanical Technology." name="subjects_studied">{{old('subjects_studied', $education[0]->subjects_studied)}}</textarea>
                         </div>                                        
                       </div>
                     </div>
