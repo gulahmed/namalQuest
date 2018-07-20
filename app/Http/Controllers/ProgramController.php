@@ -54,6 +54,7 @@ class ProgramController extends Controller
 
       $test_roll_number ="";
       $test_obtained_marks= "";
+      $test_name ="";
       $test_details = TestDetails:: where('applicant_id','=', Auth::user()->id)->first();   
       if($test_details!=NULL){
       $test_name = $test_details->test_name;

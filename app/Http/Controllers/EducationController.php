@@ -29,8 +29,14 @@ class EducationController extends Controller
      */
     public function create()
     {
-      $education = Education::where('applicant_id', Auth::user()->id)->get();
-      return view('applicant.education',['count'=>$education->count(), 'education'=>$education]);
+      $education = Education::where('applicant_id', Auth::user()->id)->first();
+      if ($education==NULL){
+          $education =new Education();
+          return view('applicant.education',[ 'education'=>$education]);
+        } else {
+          return view('applicant.education',[ 'education'=>$education]);
+        }
+
     }
 
     /**
