@@ -100,7 +100,7 @@
 
                     <div class="row">
                       <div class="col-sm-3">
-                        <label for="inter1rollnum">Roll Number</label>
+                        <label for="inter1rollnum">Roll Number (Final Year)</label>
                         <div class="form-group">
                           <div class="input-group" data-toggle="popover" title="Hint" data-placement="bottom" data-trigger="hover" data-content="Provide roll number of study year, you have passed">
                             <div class="input-group-prepend">
@@ -121,7 +121,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>,
-                            <input name="total_marks" type="text" class="form-control" id="inter1totalmarks" value="{{ old('total_marks',$education->total_marks) }}" required>
+                            <input name="total_marks" type="number" class="form-control" id="inter1totalmarks" value="{{ old('total_marks',$education->total_marks) }}" required>
                           </div>
                         </div>
                       </div>
@@ -134,7 +134,7 @@
                                   <i class="fas fa-hashtag"></i>
                                 </span>
                             </div>
-                            <input name="obtained_marks" type="text" class="form-control" id="inter1obtmarks" value="{{ old('obtained_marks',$education->obtained_marks) }}" required>
+                            <input name="obtained_marks" type="number" class="form-control" id="inter1obtmarks" value="{{ old('obtained_marks',$education->obtained_marks) }}" required>
                           </div>
                         </div>
                       </div>
@@ -151,19 +151,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-3">
-                        <label for="inter2rollnum">Roll Number (Last Year)</label>
-                        <div class="form-group">
-                          <div class="input-group" data-toggle="popover" title="Hint" data-placement="bottom" data-trigger="hover" data-content="Provide roll number of final study year i.e. 2nd year (Intermediate), 3rd year (DAE)">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                  <i class="fas fa-hashtag"></i>
-                                </span>
-                            </div>
-                            <input name="rollnumber" type="text" class="form-control" id="inter2rollnum" value="{{ old('rollnumber',$education->rollnumber) }}" required>
-                          </div>
-                        </div>
-                      </div>                      
+                         
                     </div>
 
                     <div class="row">
