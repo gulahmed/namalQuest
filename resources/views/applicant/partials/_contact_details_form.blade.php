@@ -92,7 +92,7 @@
 	  <option {{old('district',$applicant->district)=="Dadu"? 'selected':''}} >Dadu</option>
 	  <option >Dera Bughti</option>
 	  <option>Diamir</option>
-	  <option{{old('district',$applicant->district)=="Faisalabad"? 'selected':''}}  >Faisalabad</option>
+	  <option >Faisalabad</option>
 	  <option>Ghanchee</option>
 	  <option>Ghizer</option>
 	  <option>Ghotki</option>
