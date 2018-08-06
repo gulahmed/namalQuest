@@ -112,7 +112,7 @@
                           </div>
                         </div>
                       </div> 
-                      <div class="col-sm-2">
+                      <div class="col-sm-3">
                         <label for="inter1totalmarks">Total Marks</label>
                         <div class="form-group">
                           <div class="input-group" data-toggle="popover" title="Hint" data-placement="bottom" data-trigger="hover" data-content="Provide total marks of study year, you have passed" >
@@ -125,7 +125,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-2">
+                      <div class="col-sm-3">
                         <label for="inter1obtmarks">Obtained Marks</label>
                         <div class="form-group">
                           <div class="input-group" data-toggle="popover" title="Hint" data-placement="bottom" data-trigger="hover" data-content="Provide obtained marks out of 'Total Marks'">
@@ -138,7 +138,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-2">
+                      <div class="col-sm-3">
                         <label for="inter1passyear">Passing Year</label>
                         <div class="form-group">
                           <div class="input-group">

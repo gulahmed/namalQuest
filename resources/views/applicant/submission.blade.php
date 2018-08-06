@@ -37,7 +37,7 @@
 							<h5 align="center">
 								<div class="alert alert-info">
 
-									Yuur application is already submitted.  
+									Your application is already submitted.  
 								</div>
 							</h5>
 							@endif
