@@ -97,7 +97,6 @@
                             <option value="NED Karachi" {{old('test_name', $test_name) =="NED Karachi" ? 'selected': ''}} >NED UET Karachi Test 2018 (100 Marks)</option>
                             <option value="Mehran Jamshoro" {{old('test_name', $test_name) =="Mehran Jamshoro" ? 'selected': ''}} >Mehran UET Jamshoro Test 2018 (100 Marks)</option>
                             <option value="Balochistan UET" {{old('test_name', $test_name) =="Balochistan UET" ? 'selected': ''}} >Balochistan UET Khuzdar Test 2018 (120 Marks)</option>
-                            <option value="other" {{old('test_name', $test_name) =="other" ? 'selected': ''}}>Other</option>
                           </select>
                         </div>
                       </div>
