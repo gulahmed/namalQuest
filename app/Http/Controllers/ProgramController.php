@@ -90,7 +90,7 @@ class ProgramController extends Controller
 
       $data = array(
           array('applicant_id'=>$applicant_id, 'program_name'=>$prefs[0], 'preference_order'=>1),
-          array('applicant_id'=>$applicant_id, 'program_name'=>$prefs[1], 'preference_order'=>2),
+        //  array('applicant_id'=>$applicant_id, 'program_name'=>$prefs[1], 'preference_order'=>2), // bad design 
         );
 
  

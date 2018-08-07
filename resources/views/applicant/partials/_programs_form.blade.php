@@ -24,8 +24,8 @@
                           <select id="firstpref" class="form-control select2" name="program_pref[]" style="width: 100%;" required>
                             <option disabled selected hidden>Choose ...</option>
                             <option {{old('first_preference',$first_preference)=="BBA" ? 'selected':''}}>BBA</option>
-                            <option {{old('first_preference',$first_preference)=="BSc Computer Science" ? 'selected':''}} >BSc Computer Science</option>
-                            <option {{old('first_preference',$first_preference)=="BSc Electrical Engineering" ? 'selected':''}} >BSc Electrical Engineering</option>
+                            <!-- <option {{old('first_preference',$first_preference)=="BSc Computer Science" ? 'selected':''}} >BSc Computer Science</option> -->
+                            <!-- <option {{old('first_preference',$first_preference)=="BSc Electrical Engineering" ? 'selected':''}} >BSc Electrical Engineering</option> -->
                           </select>
                         </div>
                       </div>
@@ -33,7 +33,7 @@
                       
                         <label for="secondpref">Second Preference</label>
                         <div class="form-group">
-                          <select id="secondpref" class="form-control select2" name="program_pref[]" style="width: 100%; " required>
+                          <select id="secondpref" class="form-control select2" name="program_pref[]" style="width: 100%; " required disabled>
                             <option disabled selected hidden>Choose ...</option>
                             <option {{old('second_preference',$second_preference)=="BBA" ? 'selected':''}}>BBA</option>
                             <option {{old('second_preference',$second_preference)=="BSc Computer Science" ? 'selected':''}} >BSc Computer Science</option>

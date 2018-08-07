@@ -25,6 +25,7 @@
 			<div class="card content-card">
 				<div class="card-body">
 					<h3>Program Details</h3>
+					<div class="alert alert-info">Applications for Computer Science and Electrical Engineering Programs are closed now. Only <b>BBA</b> program is open till 20th August. </div>
 					<form method="post" action="{{url('/apply/programs')}}">
 						{{csrf_field()}}
 
