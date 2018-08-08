@@ -86,11 +86,13 @@ class ProgramController extends Controller
       ]);
 
       $applicant_id = Auth::User()->id;
-      $prefs =$request->get('program_pref');
+      //$prefs =$request->get('program_pref'); 
+      $prefs = ['BBA','BBA'];
+
 
       $data = array(
           array('applicant_id'=>$applicant_id, 'program_name'=>$prefs[0], 'preference_order'=>1),
-        //  array('applicant_id'=>$applicant_id, 'program_name'=>$prefs[1], 'preference_order'=>2), // bad design 
+          array('applicant_id'=>$applicant_id, 'program_name'=>$prefs[1], 'preference_order'=>2), 
         );
 
  
